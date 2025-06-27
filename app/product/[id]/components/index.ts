@@ -1,0 +1,7 @@
+export * from './BackToCatalog'
+export * from './Breadcrumbs'
+export * from './ProductActions'
+export * from './ProductDetails'
+export * from './ProductInfo'
+export * from './ProductImageGallery'
+export * from './SimilarProducts'

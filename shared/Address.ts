@@ -1,0 +1,5 @@
+export const COMPANY_NAME = 'SABLEFUR'
+export const COMPANY_PHONE = '+7 (495) 123-45-67'
+export const COMPANY_PHONE_2 = '+7 (495) 123-45-68'
+export const COMPANY_EMAIL = 'info@sablefur.ru'
+export const SHOP_ADDRESS = 'ТД ЦУМ, г. Москва, ул. Петровка, д. 2'
