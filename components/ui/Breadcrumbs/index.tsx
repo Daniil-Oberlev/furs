@@ -3,14 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-interface IBreadcrumbItem {
-  text: string
-  href?: string
-}
-
-interface IBreadcrumbs {
-  items: IBreadcrumbItem[]
-}
+import { IBreadcrumbs } from './types'
 
 export const Breadcrumbs = ({ items }: IBreadcrumbs) => {
   const limitedItems = items.slice(0, 3)
@@ -21,9 +14,10 @@ export const Breadcrumbs = ({ items }: IBreadcrumbs) => {
       className='flex items-center space-x-2 text-stone-600 mb-8 text-base font-inter'
     >
       {limitedItems.map((item, index) => (
-        <React.Fragment key={index}>
+        <>
           {index < limitedItems.length - 1 && item.href ? (
             <Link
+              key={`link-${index}`}
               href={item.href}
               className='hover:text-amber-700 transition-colors'
               aria-current={index === limitedItems.length - 1 ? 'page' : undefined}
@@ -31,10 +25,15 @@ export const Breadcrumbs = ({ items }: IBreadcrumbs) => {
               {item.text}
             </Link>
           ) : (
-            <span className='text-amber-700'>{item.text}</span>
+            <span
+              key={`span-${index}`}
+              className='text-amber-700'
+            >
+              {item.text}
+            </span>
           )}
-          {index < limitedItems.length - 1 && <span>/</span>}
-        </React.Fragment>
+          {index < limitedItems.length - 1 && <span key={`separator-${index}`}>/</span>}
+        </>
       ))}
     </nav>
   )
