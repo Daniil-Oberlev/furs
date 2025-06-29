@@ -1,22 +1,16 @@
-import Image from 'next/image'
+'use client'
 
 import React, { useRef, useState } from 'react'
-import { useClickOutside } from '@/hooks/useClickOutside'
+import Image from 'next/image'
 
-import { Badge } from '@/components/ui/badge'
 import { ChevronLeft, ChevronRight, X } from 'lucide-react'
 
-interface ProductImageGalleryProps {
-  images: string[]
-  category: string
-  productName: string
-}
+import { Badge } from '@/components/ui/badge'
+import { useClickOutside } from '@/hooks/useClickOutside'
 
-export const ProductImageGallery = ({
-  images,
-  category,
-  productName
-}: ProductImageGalleryProps) => {
+import { IProductImageGallery } from './types'
+
+export const ProductImageGallery = ({ images, category, productName }: IProductImageGallery) => {
   const [selectedImage, setSelectedImage] = useState(0)
   const [isGalleryOpen, setIsGalleryOpen] = useState(false)
   const [galleryIndex, setGalleryIndex] = useState(0)
@@ -43,12 +37,25 @@ export const ProductImageGallery = ({
     document.body.style.overflow = 'hidden'
   }
 
-  const nextImage = () => {
+  const closeGallery = (e?: React.MouseEvent) => {
+    e?.stopPropagation()
+    setIsGalleryOpen(false)
+    document.body.style.overflow = 'unset'
+  }
+
+  const nextImage = (e: React.MouseEvent) => {
+    e.stopPropagation()
     setGalleryIndex(prev => (prev + 1) % images.length)
   }
 
-  const prevImage = () => {
+  const prevImage = (e: React.MouseEvent) => {
+    e.stopPropagation()
     setGalleryIndex(prev => (prev - 1 + images.length) % images.length)
+  }
+
+  const handleThumbnailClick = (index: number) => (e: React.MouseEvent) => {
+    e.stopPropagation()
+    setGalleryIndex(index)
   }
 
   return (
@@ -92,29 +99,33 @@ export const ProductImageGallery = ({
         ))}
       </div>
       {isGalleryOpen && (
-        <div className='fixed inset-0 z-50 bg-black/90 flex items-center justify-center'>
+        <div
+          className='fixed inset-0 z-50 bg-black/90 flex items-center justify-center'
+          onClick={closeGallery}
+        >
           <div
             ref={galleryRef}
-            className='relative w-full h-full flex items-center justify-center p-4'
+            className='relative w-full max-w-4xl h-full flex items-center justify-center p-4'
+            onClick={e => e.stopPropagation()}
           >
             <button
-              onClick={() => {
-                setIsGalleryOpen(false)
-                document.body.style.overflow = 'unset'
-              }}
-              className='absolute top-4 right-4 z-10 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors'
+              onClick={closeGallery}
+              className='absolute top-4 -right-0 z-10 bg-amber-600/90 hover:bg-amber-800/60 rounded-full p-2 transition-colors'
+              aria-label='Закрыть галерею'
             >
               <X className='h-6 w-6 text-white' />
             </button>
             <button
               onClick={prevImage}
               className='absolute left-4 z-10 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors'
+              aria-label='Предыдущее изображение'
             >
               <ChevronLeft className='h-6 w-6 text-white' />
             </button>
             <button
               onClick={nextImage}
               className='absolute right-4 z-10 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors'
+              aria-label='Следующее изображение'
             >
               <ChevronRight className='h-6 w-6 text-white' />
             </button>
@@ -125,6 +136,7 @@ export const ProductImageGallery = ({
                 width={800}
                 height={1000}
                 className='max-w-full max-h-full object-contain'
+                priority
               />
             </div>
             <div className='absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white/10 rounded-full px-4 py-2'>
@@ -136,10 +148,11 @@ export const ProductImageGallery = ({
               {images.map((image, index) => (
                 <button
                   key={index}
-                  onClick={() => setGalleryIndex(index)}
+                  onClick={handleThumbnailClick(index)}
                   className={`w-16 h-16 rounded-lg overflow-hidden border-2 transition-colors ${
                     galleryIndex === index ? 'border-amber-400' : 'border-white/30'
                   }`}
+                  aria-label={`Перейти к изображению ${index + 1}`}
                 >
                   <Image
                     src={image}
