@@ -2,17 +2,16 @@
 
 import Image from "next/image"
 import Link from "next/link"
-
-import {Button} from "@/components/ui/button"
 import {Card, CardContent} from "@/components/ui/card"
-
-import {BackToHome} from "@/components/ui/BackToHome";
 
 import {ConsultationForm} from "../components/forms"
 
 import {ACHIEVEMENTS, TEAM_MEMBERS} from "./mock";
 import {COMPANY_NAME} from "@/shared/Address";
-import {TypographyH1, TypographyH2, TypographyH3, TypographyP} from "@/components/ui/typography";
+import {TypographyH2, TypographyH3, TypographyP} from "@/components/ui/typography";
+import {LinkButton} from "@/components/ui/LinkButton";
+import {ArrowLeft} from "lucide-react";
+import {PageHeader} from "@/app/components/PageHeader";
 
 export default function AboutPage() {
   return (
@@ -27,15 +26,12 @@ export default function AboutPage() {
           <span className="text-amber-700">О нас</span>
         </div>
 
-        {/* Hero Section */}
-        <section className="text-center mb-16">
-          <TypographyH1 className="md:text-6xl mb-6">О бренде {COMPANY_NAME}</TypographyH1>
-          <TypographyP className="max-w-3xl mx-auto">
-            Более четверти века мы создаем шубы исключительного качества, воплощая в каждом изделии традиции
+        <PageHeader
+          title={`О бренде ${COMPANY_NAME}`}
+          description='Более четверти века мы создаем шубы исключительного качества, воплощая в каждом изделии традиции
             мастерства
-            и современные тенденции моды
-          </TypographyP>
-        </section>
+            и современные тенденции моды'
+        />
 
         {/* Story Section */}
         <section className="mb-20">
@@ -131,7 +127,7 @@ export default function AboutPage() {
             <TypographyH2 className="text-4xl font-playfair font-light text-stone-100 mb-8">Наши ценности</TypographyH2>
             <div className="grid md:grid-cols-3 gap-8">
               <div>
-                <TypographyH3 className="   text-amber-400 mb-4">Качество</TypographyH3>
+                <TypographyH3 className="text-amber-400 mb-4">Качество</TypographyH3>
                 <TypographyP className="text-stone-300">
                   Мы используем только лучшие материалы и проверенные временем техники
                 </TypographyP>
@@ -160,20 +156,27 @@ export default function AboutPage() {
               Приглашаем вас познакомиться с нашей коллекцией лично. Наши консультанты помогут подобрать идеальную шубу именно для вас.
             </TypographyP>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <LinkButton
+                href='/catalog'
+                text='Посмотреть каталог'
+                variant='amberOutline'
+                size='lg'
+                className='bg-white'
+              />
               <ConsultationForm buttonText="Записаться на консультацию"/>
-              <Link href="/catalog">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-stone-100 px-8 py-3 text-base font-inter font-medium"
-                >
-                  Посмотреть каталог
-                </Button>
-              </Link>
             </div>
           </div>
         </section>
-        <BackToHome />
+        <div className="text-center">
+          <LinkButton
+            href='/'
+            text='Вернуться на главную'
+            variant='amberOutline'
+            icon={<ArrowLeft/>}
+            iconPosition='left'
+            className='bg-white'
+          />
+        </div>
       </div>
     </div>
   )

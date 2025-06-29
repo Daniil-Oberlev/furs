@@ -4,14 +4,20 @@ import type React from "react"
 import {useState} from "react"
 
 import {Button} from "@/components/ui/button"
-import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog"
+import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger,} from "@/components/ui/dialog"
 import {Input} from "@/components/ui/input"
 import {Label} from "@/components/ui/label"
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select"
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue,} from "@/components/ui/select"
 
 import {usePhoneInput} from "@/hooks/usePhoneInput"
 
-export const ConsultationForm = ({buttonText = "Записаться", variant = "default"}: IConsultationForm) => {
+import {IConsultationForm} from './types'
+
+export const ConsultationForm = ({
+                                   buttonText = "Записаться",
+                                   variant = "default",
+                                   size = "default",
+                                 }: IConsultationForm) => {
   const [formData, setFormData] = useState({
     name: "",
     service: "",
@@ -46,19 +52,18 @@ export const ConsultationForm = ({buttonText = "Записаться", variant =
     })
   }
 
-  const buttonClasses =
-    variant === "compact"
-      ? "bg-amber-700 hover:bg-amber-800 text-stone-100 px-4 py-2 text-sm font-inter font-medium"
-      : "bg-amber-700 hover:bg-amber-800 text-stone-100 px-6 py-3 text-base font-inter font-medium"
-
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
-        <Button className={buttonClasses} >{buttonText}</Button>
+        <Button variant={variant} size={size} className='text-base'>
+          {buttonText}
+        </Button>
       </DialogTrigger>
       <DialogContent className="bg-white border-stone-300 text-stone-800 max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-amber-700 text-xl">Записаться на консультацию</DialogTitle>
+          <DialogTitle className="text-amber-700 text-xl">
+            Записаться на консультацию
+          </DialogTitle>
         </DialogHeader>
 
         {isSubmitted ? (
@@ -103,8 +108,7 @@ export const ConsultationForm = ({buttonText = "Записаться", variant =
             <div>
               <Label className="text-stone-800 mb-2 block">Услуга</Label>
               <Select onValueChange={(value) => handleSelectChange("service", value)}>
-                <SelectTrigger
-                  className="bg-white border-stone-300 text-stone-800 placeholder:text-stone-400">
+                <SelectTrigger className="bg-white border-stone-300 text-stone-800 placeholder:text-stone-400">
                   <SelectValue placeholder="Выберите услугу"/>
                 </SelectTrigger>
                 <SelectContent className="bg-white border-stone-300">
@@ -133,8 +137,7 @@ export const ConsultationForm = ({buttonText = "Записаться", variant =
               <div>
                 <Label className="text-stone-800 mb-2 block">Время</Label>
                 <Select onValueChange={(value) => handleSelectChange("time", value)}>
-                  <SelectTrigger
-                    className="bg-white border-stone-300 text-stone-800 placeholder:text-stone-400">
+                  <SelectTrigger className="bg-white border-stone-300 text-stone-800 placeholder:text-stone-400">
                     <SelectValue placeholder="Время"/>
                   </SelectTrigger>
                   <SelectContent className="bg-white border-stone-300">
@@ -149,10 +152,7 @@ export const ConsultationForm = ({buttonText = "Записаться", variant =
               </div>
             </div>
 
-            <Button
-              type="submit"
-              className="w-full bg-amber-700 hover:bg-amber-800 text-stone-100 px-6 py-3 text-base font-inter font-medium"
-            >
+            <Button type="submit" variant={variant} size="default" className="w-full">
               Записаться
             </Button>
           </form>

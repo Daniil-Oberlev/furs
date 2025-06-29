@@ -2,25 +2,25 @@
 
 import Link from "next/link"
 
-import { TypographyH1, TypographyP } from "@/components/ui/typography"
+import {ArrowLeft} from "lucide-react";
 
-import {BackToHome} from "@/components/ui/BackToHome";
-
+import {TypographyH1, TypographyP} from "@/components/ui/typography"
 import {ProductCard} from "@/components/ui/ProductCard";
+import {LinkButton} from "@/components/ui/LinkButton"
 
 import {productData} from '@/shared/Products'
 
-export default function CatalogPage() {
-  const products = Object.entries(productData).map(([id, product]) => ({
-    id: Number(id),
-    name: product.name,
-    furType: product.furType,
-    price: product.price,
-    image: product.images[0],
-    category: product.category,
-    purchaseLink: product.purchaseLink,
-  }));
+const products = Object.entries(productData).map(([id, product]) => ({
+  id: Number(id),
+  name: product.name,
+  furType: product.furType,
+  price: product.price,
+  image: product.images[0],
+  category: product.category,
+  purchaseLink: product.purchaseLink,
+}));
 
+export default function CatalogPage() {
   return (
     <div className="min-h-screen bg-stone-100">
       <div className="container mx-auto px-4 py-8">
@@ -34,14 +34,14 @@ export default function CatalogPage() {
         </div>
 
         {/* Page Header */}
-        <div className="text-center mb-12">
+        <section className="text-center mb-12">
           <TypographyH1 className="mb-4">
             Полный каталог
           </TypographyH1>
-          <TypographyP className=" max-w-2xl mx-auto">
+          <TypographyP className="max-w-2xl mx-auto">
             Вся наша коллекция эксклюзивных шуб из натурального меха высочайшего качества
           </TypographyP>
-        </div>
+        </section>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {products.map((product) => (
@@ -57,7 +57,16 @@ export default function CatalogPage() {
             />
           ))}
         </div>
-        <BackToHome />
+        <div className="text-center">
+          <LinkButton
+            href='/'
+            text='Вернуться на главную'
+            variant='amberOutline'
+            icon={<ArrowLeft/>}
+            iconPosition='left'
+            className='bg-white'
+          />
+        </div>
       </div>
     </div>
   );

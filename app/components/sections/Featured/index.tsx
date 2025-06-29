@@ -1,13 +1,10 @@
-import Link from "next/link";
-
 import {ArrowRight} from "lucide-react";
-
-import {Button} from "@/components/ui/button";
 import {TypographyH2, TypographyP} from "@/components/ui/typography";
 
 import {ProductCard} from "@/components/ui/ProductCard";
 
 import {FEATURE_PRODUCTS} from "./utils";
+import {LinkButton} from "@/components/ui/LinkButton";
 
 export const FeaturedSection = () => {
   return (
@@ -32,15 +29,12 @@ export const FeaturedSection = () => {
           ))}
         </div>
         <div className="text-center mt-12">
-          <Link href="/catalog">
-            <Button
-              size="lg"
-              className="bg-amber-700 hover:bg-amber-800  px-8 py-3"
-            >
-              Показать все товары
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </Link>
+          <LinkButton
+            href='/catalog'
+            text="Показать все товары"
+            icon={<ArrowRight/>}
+            size='lg'
+          />
         </div>
       </div>
     </section>

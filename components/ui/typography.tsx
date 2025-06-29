@@ -9,7 +9,7 @@ interface TypographyProps {
 
 export function TypographyH1({children, className}: TypographyProps) {
   return (
-    <h1 className={cn("text-5xl md:text-7xl font-playfair font-light text-stone-800 leading-tight", className)}>
+    <h1 className={cn("text-5xl md:text-6xl font-playfair font-light text-stone-800 leading-tight", className)}>
       {children}
     </h1>
   )
