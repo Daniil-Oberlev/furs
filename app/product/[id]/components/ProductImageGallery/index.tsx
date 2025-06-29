@@ -15,7 +15,7 @@ export const ProductImageGallery = ({ images, category, productName }: IProductI
   const [isGalleryOpen, setIsGalleryOpen] = useState(false)
   const [galleryIndex, setGalleryIndex] = useState(0)
   const imageRef = useRef<HTMLDivElement>(null)
-  const galleryRef = useClickOutside<HTMLDivElement>(() => {
+  const galleryRef = useClickOutside<HTMLDivElement>(event => {
     setIsGalleryOpen(false)
     document.body.style.overflow = 'unset'
   }, isGalleryOpen)

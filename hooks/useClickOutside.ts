@@ -2,15 +2,20 @@
 
 import { useEffect, useRef } from 'react'
 
-export const useClickOutside = <T extends HTMLElement>(callback: () => void, enabled = true) => {
+export const useClickOutside = <T extends HTMLElement>(
+  callback: (event: MouseEvent) => void,
+  enabled = true
+) => {
   const ref = useRef<T>(null)
+  const callbackRef = useRef(callback)
+  callbackRef.current = callback
 
   useEffect(() => {
     if (!enabled) return
 
     const handleClickOutside = (event: MouseEvent) => {
       if (ref.current && !ref.current.contains(event.target as Node)) {
-        callback()
+        callbackRef.current(event)
       }
     }
 
@@ -18,7 +23,7 @@ export const useClickOutside = <T extends HTMLElement>(callback: () => void, ena
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
-  }, [callback, enabled])
+  }, [enabled])
 
   return ref
 }
