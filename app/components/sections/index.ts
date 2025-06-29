@@ -1,6 +1,0 @@
-export * from './About'
-export * from './ContactForm'
-export * from './Contacts'
-export * from './Featured'
-export * from './Hero'
-export * from './Services'

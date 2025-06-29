@@ -4,7 +4,7 @@ import { ArrowLeft } from 'lucide-react'
 
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
 import { LinkButton } from '@/components/ui/LinkButton'
-import { PageHeader } from '@/app/components/PageHeader'
+import { PageHeader } from '@/components/ui/PageHeader'
 import { ProductCard } from '@/components/ui/ProductCard'
 import { TypographyH1, TypographyP } from '@/components/ui/typography'
 
