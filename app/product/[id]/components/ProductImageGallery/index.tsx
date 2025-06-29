@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useRef, useState } from 'react'
+import React, { useCallback, useRef, useState } from 'react'
 import Image from 'next/image'
 
 import { ChevronLeft, ChevronRight, X } from 'lucide-react'
@@ -20,7 +20,7 @@ export const ProductImageGallery = ({ images, category, productName }: IProductI
     document.body.style.overflow = 'unset'
   }, isGalleryOpen)
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     if (!imageRef.current) return
     const rect = imageRef.current.getBoundingClientRect()
     const x = ((e.clientX - rect.left) / rect.width) * 100
@@ -29,29 +29,29 @@ export const ProductImageGallery = ({ images, category, productName }: IProductI
     if (image) {
       image.style.transformOrigin = `${x}% ${y}%`
     }
-  }
+  }, [])
 
-  const openGallery = (index: number) => {
+  const openGallery = useCallback((index: number) => {
     setGalleryIndex(index)
     setIsGalleryOpen(true)
     document.body.style.overflow = 'hidden'
-  }
+  }, [])
 
-  const closeGallery = (e?: React.MouseEvent) => {
+  const closeGallery = useCallback((e?: React.MouseEvent) => {
     e?.stopPropagation()
     setIsGalleryOpen(false)
     document.body.style.overflow = 'unset'
-  }
+  }, [])
 
-  const nextImage = (e: React.MouseEvent) => {
+  const nextImage = useCallback((e: React.MouseEvent) => {
     e.stopPropagation()
     setGalleryIndex(prev => (prev + 1) % images.length)
-  }
+  }, [])
 
-  const prevImage = (e: React.MouseEvent) => {
+  const prevImage = useCallback((e: React.MouseEvent) => {
     e.stopPropagation()
     setGalleryIndex(prev => (prev - 1 + images.length) % images.length)
-  }
+  }, [])
 
   const handleThumbnailClick = (index: number) => (e: React.MouseEvent) => {
     e.stopPropagation()
