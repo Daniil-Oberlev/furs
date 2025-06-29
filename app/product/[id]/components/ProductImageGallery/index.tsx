@@ -117,14 +117,14 @@ export const ProductImageGallery = ({ images, category, productName }: IProductI
             </button>
             <button
               onClick={prevImage}
-              className='absolute left-4 z-10 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors'
+              className='absolute -left-0 z-10 bg-amber-600/90 hover:bg-amber-800/60 rounded-full p-2 transition-colors'
               aria-label='Предыдущее изображение'
             >
               <ChevronLeft className='h-6 w-6 text-white' />
             </button>
             <button
               onClick={nextImage}
-              className='absolute right-4 z-10 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors'
+              className='absolute -right-0 z-10 bg-amber-600/90 hover:bg-amber-800/60 rounded-full p-2 transition-colors'
               aria-label='Следующее изображение'
             >
               <ChevronRight className='h-6 w-6 text-white' />
