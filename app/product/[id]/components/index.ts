@@ -1,4 +1,3 @@
-export * from './BackToCatalog'
 export * from './Breadcrumbs'
 export * from './ProductActions'
 export * from './ProductDetails'

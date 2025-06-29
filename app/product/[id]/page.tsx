@@ -6,14 +6,13 @@ import { useState } from 'react'
 import { useParams } from 'next/navigation'
 import Image from 'next/image'
 
-import { ChevronLeft, ChevronRight, X } from 'lucide-react'
+import { ArrowLeft, ChevronLeft, ChevronRight, X } from 'lucide-react'
 
 import { useClickOutside } from '@/hooks/useClickOutside'
 
 import { productData } from '@/shared/Products'
 
 import {
-  BackToCatalog,
   Breadcrumbs,
   ProductActions,
   ProductDetails,
@@ -21,6 +20,7 @@ import {
   ProductInfo,
   SimilarProducts
 } from './components'
+import { LinkButton } from '@/components/ui/LinkButton'
 
 export default function ProductPage() {
   const params = useParams()
@@ -86,7 +86,15 @@ export default function ProductPage() {
           </div>
         </div>
         <SimilarProducts products={similarProducts} />
-        <BackToCatalog />
+        <div className='mt-8 text-center'>
+          <LinkButton
+            href='/catalog'
+            text='Вернуться к каталогу'
+            variant='amberOutline'
+            icon={<ArrowLeft />}
+            iconPosition='left'
+          />
+        </div>
         {isGalleryOpen && (
           <div className='fixed inset-0 z-50 bg-black/90 flex items-center justify-center'>
             <div
