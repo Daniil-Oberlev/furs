@@ -1,33 +1,27 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
+
+import { ArrowLeft } from 'lucide-react'
+
 import { Card, CardContent } from '@/components/ui/card'
 
+import { LinkButton } from '@/components/ui/LinkButton'
+import { PageHeader } from '@/app/components/PageHeader'
+import { TypographyH2, TypographyH3, TypographyP } from '@/components/ui/typography'
 import { ConsultationForm } from '../components/forms'
 
 import { ACHIEVEMENTS, TEAM_MEMBERS } from './mock'
 import { COMPANY_NAME } from '@/shared/Address'
-import { TypographyH2, TypographyH3, TypographyP } from '@/components/ui/typography'
-import { LinkButton } from '@/components/ui/LinkButton'
-import { ArrowLeft } from 'lucide-react'
-import { PageHeader } from '@/app/components/PageHeader'
+import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
+
+import { BREADCRUMBS_ITEMS } from './constants'
 
 export default function AboutPage() {
   return (
     <div className='min-h-screen bg-stone-100'>
       <div className='container mx-auto px-4 py-8'>
-        {/* Breadcrumb */}
-        <div className='flex items-center space-x-2 text-stone-600 mb-8 text-base font-inter'>
-          <Link
-            href='/'
-            className='hover:text-amber-700 transition-colors'
-          >
-            Главная
-          </Link>
-          <span>/</span>
-          <span className='text-amber-700'>О нас</span>
-        </div>
+        <Breadcrumbs items={BREADCRUMBS_ITEMS} />
 
         <PageHeader
           title={`О бренде ${COMPANY_NAME}`}
@@ -36,7 +30,6 @@ export default function AboutPage() {
             и современные тенденции моды'
         />
 
-        {/* Story Section */}
         <section className='mb-20'>
           <div className='grid lg:grid-cols-2 gap-12 items-center'>
             <div>
@@ -72,7 +65,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Achievements */}
         <section className='mb-20'>
           <div className='text-center mb-12'>
             <TypographyH2 className='mb-4'>Наши достижения</TypographyH2>
@@ -99,7 +91,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Team Section */}
         <section className='mb-20'>
           <div className='text-center mb-12'>
             <TypographyH2 className='mb-4'>Наша команда</TypographyH2>
@@ -137,7 +128,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Values Section */}
         <section className='mb-20'>
           <div className='bg-stone-800 rounded-lg p-12 text-center'>
             <TypographyH2 className='text-4xl font-playfair font-light text-stone-100 mb-8'>
@@ -166,7 +156,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
         <section className='text-center mb-16'>
           <div className='bg-stone-50 rounded-lg p-12'>
             <TypographyH2 className='text-4xl font-playfair font-light text-stone-800 mb-6'>

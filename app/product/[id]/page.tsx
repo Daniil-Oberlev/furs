@@ -5,15 +5,14 @@ import { useParams } from 'next/navigation'
 
 import { ArrowLeft } from 'lucide-react'
 
+import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
 import {
-  Breadcrumbs,
   ProductActions,
   ProductDetails,
   ProductImageGallery,
   ProductInfo,
   SimilarProducts
 } from './components'
-
 import { LinkButton } from '@/components/ui/LinkButton'
 
 import { productData } from '@/shared/Products'
@@ -22,6 +21,12 @@ export default function ProductPage() {
   const params = useParams()
   const productId = Number(params.id)
   const product = productData[productId]
+
+  const BREADCRUMBS_ITEMS = [
+    { text: 'Главная', href: '/' },
+    { text: 'Каталог', href: '/catalog' },
+    { text: product.name }
+  ]
 
   const similarProducts = Object.entries(productData)
     .filter(([id]) => Number(id) !== productId)
@@ -42,7 +47,7 @@ export default function ProductPage() {
   return (
     <div className='min-h-screen bg-stone-100'>
       <div className='container mx-auto px-4 py-6'>
-        <Breadcrumbs productName={product.name} />
+        <Breadcrumbs items={BREADCRUMBS_ITEMS} />
         <div className='grid lg:grid-cols-2 gap-12'>
           <ProductImageGallery
             images={product.images}
