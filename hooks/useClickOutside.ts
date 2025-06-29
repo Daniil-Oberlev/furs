@@ -1,6 +1,6 @@
-"use client"
+'use client'
 
-import {useEffect, useRef} from "react"
+import { useEffect, useRef } from 'react'
 
 export const useClickOutside = <T extends HTMLElement>(callback: () => void, enabled = true) => {
   const ref = useRef<T>(null)
@@ -14,9 +14,9 @@ export const useClickOutside = <T extends HTMLElement>(callback: () => void, ena
       }
     }
 
-    document.addEventListener("mousedown", handleClickOutside)
+    document.addEventListener('mousedown', handleClickOutside)
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
+      document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [callback, enabled])
 

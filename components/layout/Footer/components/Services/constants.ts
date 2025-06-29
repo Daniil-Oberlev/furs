@@ -1,3 +1,5 @@
+import { IServiceItem } from './types'
+
 export const SERVICES_LINKS: IServiceItem[] = [
   {
     name: 'Примерка',

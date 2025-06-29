@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import {
   AboutSection,
@@ -7,17 +7,17 @@ import {
   FeaturedSection,
   HeroSection,
   ServicesSection
-} from "./components/sections";
+} from './components/sections'
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-stone-100">
-      <HeroSection/>
-      <FeaturedSection/>
-      <AboutSection/>
-      <ServicesSection/>
-      <ContactFormSection/>
-      <ContactsSection/>
+    <div className='min-h-screen bg-stone-100'>
+      <HeroSection />
+      <FeaturedSection />
+      <AboutSection />
+      <ServicesSection />
+      <ContactFormSection />
+      <ContactsSection />
     </div>
   )
 }

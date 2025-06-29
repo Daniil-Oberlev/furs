@@ -1,4 +1,4 @@
-import {productData} from '@/shared/Products'
+import { productData } from '@/shared/Products'
 
 export const FEATURE_PRODUCTS = Object.entries(productData)
   .slice(0, 9)
@@ -9,5 +9,5 @@ export const FEATURE_PRODUCTS = Object.entries(productData)
     price: product.price,
     image: product.images[0],
     category: product.category,
-    purchaseLink: product.purchaseLink,
-  }));
+    purchaseLink: product.purchaseLink
+  }))

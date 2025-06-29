@@ -1,3 +1,5 @@
+import { NavItem } from './types'
+
 export const NAV_LINKS: NavItem[] = [
   {
     name: 'Каталог',

@@ -1,4 +1,4 @@
-import {IServiceCard} from "./components/ServiceCard/types"
+import { IServiceCard } from './components/ServiceCard/types'
 
 export const SERVICES: IServiceCard[] = [
   {
@@ -21,5 +21,5 @@ export const SERVICES: IServiceCard[] = [
     buttonText: 'Узнать больше',
     variant: 'amber',
     size: 'default'
-  },
+  }
 ]

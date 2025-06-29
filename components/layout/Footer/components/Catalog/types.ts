@@ -1,4 +1,4 @@
-interface ICatalogItem {
+export interface ICatalogItem {
   name: string
   url: string
 }

@@ -1,35 +1,83 @@
-"use client";
+'use client'
 
-import {useMemo, useState} from "react";
-import {formatPhoneNumber} from "./format";
-import {handleBlur, handleChange, handleKeyDown, validatePhone} from "./handlers";
-import {PhoneInputReturn} from "./types";
+import React, { useState, useCallback, useMemo } from 'react'
+import { z } from 'zod'
 
-export const usePhoneInput = (initialValue = ""): PhoneInputReturn => {
-  const [value, setValue] = useState(initialValue);
-  const [error, setError] = useState<string | null>(null);
-  const [touched, setTouched] = useState(false);
+import { ALLOWED_KEYS } from './constants'
 
-  const isValid = useMemo(() => error === null, [error]);
-  const displayError = touched ? error : null;
+import { phoneSchema } from './schema'
+
+import { formatPhoneNumber } from './utils'
+
+import { PhoneInputReturn } from './types'
+
+export const usePhoneInput = (initialValue = ''): PhoneInputReturn => {
+  const [value, setValue] = useState(initialValue)
+  const [error, setError] = useState<string | null>(null)
+  const [touched, setTouched] = useState(false)
+
+  const validatePhone = useCallback((phone: string): boolean => {
+    try {
+      phoneSchema.parse(phone.replace(/\D/g, ''))
+      setError(null)
+      return true
+    } catch (err) {
+      if (err instanceof z.ZodError) {
+        setError(err.errors[0].message)
+      }
+      return false
+    }
+  }, [])
+
+  const handleChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const newValue = formatPhoneNumber(e.target.value)
+      setValue(newValue)
+      if (touched) validatePhone(newValue)
+    },
+    [touched, validatePhone]
+  )
+
+  const handleBlur = useCallback(() => {
+    setTouched(true)
+    validatePhone(value)
+  }, [value, validatePhone])
+
+  const handleKeyDown = useCallback((e: React.KeyboardEvent<HTMLInputElement>) => {
+    const isCtrlCombination =
+      (e.ctrlKey || e.metaKey) && ['a', 'c', 'v', 'x', 'z'].includes(e.key.toLowerCase())
+
+    if (ALLOWED_KEYS.includes(e.key) || isCtrlCombination) return
+
+    const isDigit = /^[0-9]$/.test(e.key)
+    const isNumpadDigit = e.key.startsWith('Numpad') && /[0-9]/.test(e.key.slice(-1))
+    const isAllowedSymbol = ['+', ' ', '-'].includes(e.key)
+
+    if (!(isDigit || isNumpadDigit || isAllowedSymbol)) {
+      e.preventDefault()
+    }
+  }, [])
+
+  const isValid = useMemo(() => error === null, [error])
+  const displayError = touched ? error : null
 
   return {
     value,
     error,
     isValid,
     displayError,
-    onChange: handleChange({formatPhoneNumber, validatePhone, setValue, setError, touched}),
-    onKeyDown: handleKeyDown(),
-    onBlur: handleBlur({validatePhone, value, setTouched, setError}),
+    onChange: handleChange,
+    onKeyDown: handleKeyDown,
+    onBlur: handleBlur,
     setValue: (newValue: string) => {
-      const formatted = formatPhoneNumber(newValue);
-      setValue(formatted);
-      validatePhone(formatted, setError);
+      const formatted = formatPhoneNumber(newValue)
+      setValue(formatted)
+      validatePhone(formatted)
     },
     reset: () => {
-      setValue("");
-      setError(null);
-      setTouched(false);
-    },
-  };
-};
+      setValue('')
+      setError(null)
+      setTouched(false)
+    }
+  }
+}

@@ -1,62 +1,65 @@
 import Image from 'next/image'
 
-import React, {useRef, useState} from "react";
-import {useClickOutside} from "@/hooks/useClickOutside";
+import React, { useRef, useState } from 'react'
+import { useClickOutside } from '@/hooks/useClickOutside'
 
-import {Badge} from '@/components/ui/badge'
-import {ChevronLeft, ChevronRight, X} from "lucide-react";
+import { Badge } from '@/components/ui/badge'
+import { ChevronLeft, ChevronRight, X } from 'lucide-react'
 
 interface ProductImageGalleryProps {
-  images: string[];
-  category: string;
-  productName: string;
+  images: string[]
+  category: string
+  productName: string
 }
 
-export const ProductImageGallery = ({images, category, productName}: ProductImageGalleryProps) => {
-  const [selectedImage, setSelectedImage] = useState(0);
-  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
-  const [galleryIndex, setGalleryIndex] = useState(0);
-  const imageRef = useRef<HTMLDivElement>(null);
+export const ProductImageGallery = ({
+  images,
+  category,
+  productName
+}: ProductImageGalleryProps) => {
+  const [selectedImage, setSelectedImage] = useState(0)
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false)
+  const [galleryIndex, setGalleryIndex] = useState(0)
+  const imageRef = useRef<HTMLDivElement>(null)
   const galleryRef = useClickOutside<HTMLDivElement>(() => {
-    setIsGalleryOpen(false);
-    document.body.style.overflow = "unset";
-  }, isGalleryOpen);
+    setIsGalleryOpen(false)
+    document.body.style.overflow = 'unset'
+  }, isGalleryOpen)
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!imageRef.current) return;
-    const rect = imageRef.current.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    const image = imageRef.current.querySelector("img");
+    if (!imageRef.current) return
+    const rect = imageRef.current.getBoundingClientRect()
+    const x = ((e.clientX - rect.left) / rect.width) * 100
+    const y = ((e.clientY - rect.top) / rect.height) * 100
+    const image = imageRef.current.querySelector('img')
     if (image) {
-      image.style.transformOrigin = `${x}% ${y}%`;
+      image.style.transformOrigin = `${x}% ${y}%`
     }
-  };
+  }
 
   const openGallery = (index: number) => {
-    setGalleryIndex(index);
-    setIsGalleryOpen(true);
-    document.body.style.overflow = "hidden";
-  };
+    setGalleryIndex(index)
+    setIsGalleryOpen(true)
+    document.body.style.overflow = 'hidden'
+  }
 
   const nextImage = () => {
-    setGalleryIndex((prev) => (prev + 1) % images.length);
-  };
+    setGalleryIndex(prev => (prev + 1) % images.length)
+  }
 
   const prevImage = () => {
-    setGalleryIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
+    setGalleryIndex(prev => (prev - 1 + images.length) % images.length)
+  }
 
   return (
-    <div className="space-y-4">
-      <div className="relative">
-        <Badge
-          className="absolute top-4 left-4 z-10 bg-amber-700 text-stone-100 font-cormorant text-sm px-3 py-1">
+    <div className='space-y-4'>
+      <div className='relative'>
+        <Badge className='absolute top-4 left-4 z-10 bg-amber-700 text-stone-100 font-cormorant text-sm px-3 py-1'>
           {category}
         </Badge>
         <div
           ref={imageRef}
-          className="relative overflow-hidden bg-white rounded-lg group cursor-zoom-in"
+          className='relative overflow-hidden bg-white rounded-lg group cursor-zoom-in'
           onMouseMove={handleMouseMove}
           onClick={() => openGallery(selectedImage)}
         >
@@ -65,17 +68,17 @@ export const ProductImageGallery = ({images, category, productName}: ProductImag
             alt={productName}
             width={800}
             height={1000}
-            className="w-full h-[600px] object-contain rounded-lg transition-transform duration-300 ease-in-out group-hover:scale-200"
+            className='w-full h-[600px] object-contain rounded-lg transition-transform duration-300 ease-in-out group-hover:scale-200'
           />
         </div>
       </div>
-      <div className="grid grid-cols-4 gap-4">
+      <div className='grid grid-cols-4 gap-4'>
         {images.map((image, index) => (
           <button
             key={index}
             onClick={() => setSelectedImage(index)}
             className={`relative rounded-lg overflow-hidden border-2 transition-colors bg-stone-200 hover:border-amber-600/60 ${
-              selectedImage === index ? "border-amber-700" : "border-stone-300"
+              selectedImage === index ? 'border-amber-700' : 'border-stone-300'
             }`}
           >
             <Image
@@ -83,57 +86,59 @@ export const ProductImageGallery = ({images, category, productName}: ProductImag
               alt={`${productName} - фото ${index + 1}`}
               width={200}
               height={200}
-              className="w-full h-24 object-cover transition-transform duration-300 hover:scale-105"
+              className='w-full h-24 object-cover transition-transform duration-300 hover:scale-105'
             />
           </button>
         ))}
       </div>
       {isGalleryOpen && (
-        <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center">
-          <div ref={galleryRef} className="relative w-full h-full flex items-center justify-center p-4">
+        <div className='fixed inset-0 z-50 bg-black/90 flex items-center justify-center'>
+          <div
+            ref={galleryRef}
+            className='relative w-full h-full flex items-center justify-center p-4'
+          >
             <button
               onClick={() => {
-                setIsGalleryOpen(false);
-                document.body.style.overflow = "unset";
+                setIsGalleryOpen(false)
+                document.body.style.overflow = 'unset'
               }}
-              className="absolute top-4 right-4 z-10 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors"
+              className='absolute top-4 right-4 z-10 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors'
             >
-              <X className="h-6 w-6 text-white"/>
+              <X className='h-6 w-6 text-white' />
             </button>
             <button
               onClick={prevImage}
-              className="absolute left-4 z-10 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors"
+              className='absolute left-4 z-10 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors'
             >
-              <ChevronLeft className="h-6 w-6 text-white"/>
+              <ChevronLeft className='h-6 w-6 text-white' />
             </button>
             <button
               onClick={nextImage}
-              className="absolute right-4 z-10 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors"
+              className='absolute right-4 z-10 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors'
             >
-              <ChevronRight className="h-6 w-6 text-white"/>
+              <ChevronRight className='h-6 w-6 text-white' />
             </button>
-            <div className="relative max-w-4xl max-h-full">
+            <div className='relative max-w-4xl max-h-full'>
               <Image
                 src={images[galleryIndex]}
                 alt={`${productName} - фото ${galleryIndex + 1}`}
                 width={800}
                 height={1000}
-                className="max-w-full max-h-full object-contain"
+                className='max-w-full max-h-full object-contain'
               />
             </div>
-            <div
-              className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white/10 rounded-full px-4 py-2">
-              <span className="text-white text-base font-inter">
+            <div className='absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white/10 rounded-full px-4 py-2'>
+              <span className='text-white text-base font-inter'>
                 {galleryIndex + 1} / {images.length}
               </span>
             </div>
-            <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <div className='absolute bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-2'>
               {images.map((image, index) => (
                 <button
                   key={index}
                   onClick={() => setGalleryIndex(index)}
                   className={`w-16 h-16 rounded-lg overflow-hidden border-2 transition-colors ${
-                    galleryIndex === index ? "border-amber-400" : "border-white/30"
+                    galleryIndex === index ? 'border-amber-400' : 'border-white/30'
                   }`}
                 >
                   <Image
@@ -141,7 +146,7 @@ export const ProductImageGallery = ({images, category, productName}: ProductImag
                     alt={`Thumbnail ${index + 1}`}
                     width={64}
                     height={64}
-                    className="w-full h-full object-cover"
+                    className='w-full h-full object-cover'
                   />
                 </button>
               ))}
@@ -150,5 +155,5 @@ export const ProductImageGallery = ({images, category, productName}: ProductImag
         </div>
       )}
     </div>
-  );
+  )
 }

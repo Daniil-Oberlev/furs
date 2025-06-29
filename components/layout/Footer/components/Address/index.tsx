@@ -1,12 +1,12 @@
-import {TypographyH4} from "@/components/ui/typography";
+import { TypographyH4 } from '@/components/ui/typography'
 
-import {COMPANY_EMAIL, COMPANY_PHONE, SHOP_ADDRESS} from "@/shared/Address";
+import { COMPANY_EMAIL, COMPANY_PHONE, SHOP_ADDRESS } from '@/shared/Address'
 
 export const FullAddress = () => {
   return (
     <address>
-      <TypographyH4 className="text-stone-200 mb-4">Контакты</TypographyH4>
-      <div className="space-y-2 text-sm text-stone-400 font-inter">
+      <TypographyH4 className='text-stone-200 mb-4'>Контакты</TypographyH4>
+      <div className='space-y-2 text-sm text-stone-400 font-inter'>
         <a href='tel:${COMPANY_PHONE}'>
           <p>{COMPANY_PHONE}</p>
         </a>

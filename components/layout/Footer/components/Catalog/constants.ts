@@ -1,3 +1,5 @@
+import { ICatalogItem } from './types'
+
 export const CATALOG_LINKS: ICatalogItem[] = [
   {
     name: 'Соболиные шубы',
