@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 import { ChevronLeft, ChevronRight, X } from 'lucide-react'
 
-import { Badge } from '@/components/ui/badge'
+import { Badge } from '@/components/ui/Badge'
 import { useClickOutside } from '@/hooks/useClickOutside'
 
 import { IProductImageGallery } from './types'
@@ -15,7 +15,7 @@ export const ProductImageGallery = ({ images, category, productName }: IProductI
   const [isGalleryOpen, setIsGalleryOpen] = useState(false)
   const [galleryIndex, setGalleryIndex] = useState(0)
   const imageRef = useRef<HTMLDivElement>(null)
-  const galleryRef = useClickOutside<HTMLDivElement>(event => {
+  const galleryRef = useClickOutside<HTMLDivElement>(() => {
     setIsGalleryOpen(false)
     document.body.style.overflow = 'unset'
   }, isGalleryOpen)
@@ -43,15 +43,21 @@ export const ProductImageGallery = ({ images, category, productName }: IProductI
     document.body.style.overflow = 'unset'
   }, [])
 
-  const nextImage = useCallback((e: React.MouseEvent) => {
-    e.stopPropagation()
-    setGalleryIndex(prev => (prev + 1) % images.length)
-  }, [])
+  const nextImage = useCallback(
+    (e: React.MouseEvent) => {
+      e.stopPropagation()
+      setGalleryIndex(prev => (prev + 1) % images.length)
+    },
+    [images.length]
+  )
 
-  const prevImage = useCallback((e: React.MouseEvent) => {
-    e.stopPropagation()
-    setGalleryIndex(prev => (prev - 1 + images.length) % images.length)
-  }, [])
+  const prevImage = useCallback(
+    (e: React.MouseEvent) => {
+      e.stopPropagation()
+      setGalleryIndex(prev => (prev - 1 + images.length) % images.length)
+    },
+    [images.length]
+  )
 
   const handleThumbnailClick = (index: number) => (e: React.MouseEvent) => {
     e.stopPropagation()

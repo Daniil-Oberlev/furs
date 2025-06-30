@@ -3,15 +3,7 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
-interface ILinkButton {
-  href: string
-  text: string
-  icon?: React.ReactNode
-  iconPosition?: 'left' | 'right'
-  variant?: 'amber' | 'amberOutline'
-  size?: 'default' | 'sm' | 'lg' | 'icon' | 'compact'
-  className?: string
-}
+import { ILinkButton } from './types'
 
 export const LinkButton = ({
   href,
