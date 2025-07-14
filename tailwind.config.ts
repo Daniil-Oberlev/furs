@@ -19,6 +19,9 @@ const config: Config = {
       }
     },
     extend: {
+      screens: {
+        lg: '1030px'
+      },
       fontFamily: {
         sans: ['var(--font-inter)'],
         playfair: ['var(--font-playfair)'],
