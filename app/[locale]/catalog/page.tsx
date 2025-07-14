@@ -27,8 +27,8 @@ export default function CatalogPage() {
         <Breadcrumbs items={BREADCRUMBS_ITEMS} />
 
         <PageHeader
-          title='Полный каталог'
-          description='Вся наша коллекция эксклюзивных шуб из натурального меха высочайшего качества'
+          title='КОЛЛЕКЦИЯ ОСЕНЬ-ЗИМА 25/26'
+          description='Новая коллекция эксклюзивных шуб из натурального меха высочайшего качества'
         />
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
