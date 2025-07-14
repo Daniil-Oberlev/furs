@@ -1,5 +1,7 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
+
 import { ArrowRight, Clock, Mail, MapPin, Phone } from 'lucide-react'
 
 import { ConsultationForm, ContactForm } from '@/app/components/forms'
@@ -20,12 +22,14 @@ import {
 } from '@/shared/Address'
 
 export default function HomePage() {
+  const t = useTranslations()
+
   return (
     <div className='min-h-screen bg-stone-100'>
       <PageHeader
-        title='Эксклюзивные шубы'
-        description='Роскошные меховые изделия из натурального меха высочайшего качества. Индивидуальный подход к каждому клиенту.'
-        className='bg-gradient-to-b from-stone-200 to-stone-100'
+        title={t('home.header.title')}
+        description={t('home.header.description')}
+        className='bg-gradient-to-b from-stone-200 to-stone-100 pt-16'
       >
         <div className='flex flex-col sm:flex-row gap-4 justify-center'>
           <ConsultationForm buttonText='Записаться на примерку' />

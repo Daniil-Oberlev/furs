@@ -1,6 +1,10 @@
 'use client'
 
-import { Logo, Navigation, ShortAddress } from './components'
+import { Phone } from 'lucide-react'
+
+import { Logo, Navigation } from './components'
+
+import { COMPANY_PHONE } from '@/shared/Address'
 
 export const Header = () => {
   return (
@@ -8,7 +12,17 @@ export const Header = () => {
       <div className='container mx-auto px-4 py-4 flex items-center justify-between'>
         <Logo />
         <Navigation />
-        <ShortAddress />
+        <address>
+          <a
+            href='tel:${COMPANY_PHONE}'
+            className='flex items-center space-x-4'
+          >
+            <Phone className='h-5 w-5 text-amber-700' />
+            <span className='text-stone-700 font-medium font-playfair text-lg'>
+              {COMPANY_PHONE}
+            </span>
+          </a>
+        </address>
       </div>
     </header>
   )
