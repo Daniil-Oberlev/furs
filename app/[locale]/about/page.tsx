@@ -4,14 +4,14 @@ import Image from 'next/image'
 
 import { ArrowLeft } from 'lucide-react'
 
-import { Card, CardContent } from '@/components/ui/card'
+// import { Card, CardContent } from '@/components/ui/card'
 
 import { LinkButton } from '@/components/ui/LinkButton'
 import { PageHeader } from '@/components/ui/PageHeader'
 import { TypographyH2, TypographyH3, TypographyP } from '@/components/ui/typography'
 import { ConsultationForm } from '../../components/forms'
 
-import { ACHIEVEMENTS } from './mock'
+// import { ACHIEVEMENTS } from './mock'
 import { COMPANY_NAME } from '@/shared/Address'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
 

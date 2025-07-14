@@ -2,7 +2,9 @@ import { TypographyH3, TypographyH4, TypographyLead } from '@/components/ui/typo
 
 import { Catalog, Copyright, Services } from './components'
 
-import { COMPANY_EMAIL, COMPANY_NAME, COMPANY_PHONE, SHOP_ADDRESS } from '@/shared/Address'
+import { COMPANY_NAME } from '@/shared/Address'
+
+// import { COMPANY_EMAIL, COMPANY_PHONE, SHOP_ADDRESS } from '@/shared/Address'
 
 export const Footer = () => {
   return (
