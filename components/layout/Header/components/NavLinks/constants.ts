@@ -9,7 +9,7 @@ export const LEFT_NAV_LINKS: NavItem[] = [
 
 export const RIGHT_NAV_LINKS: NavItem[] = [
   { name: 'Услуги', url: '/#services' },
-  { name: 'Контакты', url: '/#contacts' }
+  { name: 'Контакты', onClick: () => {} }
 ]
 
 export const ALL_NAV_LINKS: NavItem[] = [...LEFT_NAV_LINKS, ...RIGHT_NAV_LINKS]

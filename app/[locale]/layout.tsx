@@ -100,7 +100,7 @@ export default async function LocaleLayout({
         >
           <Header />
           <Loading />
-          <main>{children}</main>
+          <main className='min-h-screen bg-stone-100'>{children}</main>
           <Footer />
         </NextIntlClientProvider>
       </body>

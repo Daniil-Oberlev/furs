@@ -25,7 +25,7 @@ export default function HomePage() {
   const t = useTranslations()
 
   return (
-    <div className='min-h-screen bg-stone-100'>
+    <>
       <PageHeader
         title={t('home.header.title')}
         description={t('home.header.description')}
@@ -238,6 +238,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   )
 }

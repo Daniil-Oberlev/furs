@@ -19,7 +19,7 @@ import { BREADCRUMBS_ITEMS } from './constants'
 
 export default function AboutPage() {
   return (
-    <div className='min-h-screen bg-stone-100'>
+    <>
       <div className='container mx-auto px-4 py-8'>
         <Breadcrumbs items={BREADCRUMBS_ITEMS} />
 
@@ -167,6 +167,6 @@ export default function AboutPage() {
           />
         </div>
       </div>
-    </div>
+    </>
   )
 }

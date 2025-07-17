@@ -22,7 +22,7 @@ const products = Object.entries(productData).map(([id, product]) => ({
 
 export default function CatalogPage() {
   return (
-    <div className='min-h-screen bg-stone-100'>
+    <>
       <div className='container mx-auto px-4 py-8'>
         <Breadcrumbs items={BREADCRUMBS_ITEMS} />
 
@@ -56,6 +56,6 @@ export default function CatalogPage() {
           />
         </div>
       </div>
-    </div>
+    </>
   )
 }
