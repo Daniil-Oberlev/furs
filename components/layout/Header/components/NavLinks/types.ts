@@ -1,5 +1,8 @@
-export interface NavItem {
-  name: string
-  url?: string
-  onClick?: () => void
+import type { NavItem } from '@/config/types'
+
+export interface INavLinks {
+  className?: string
+  linkClassName?: string
+  links: NavItem[]
+  onLinkClick?: () => void
 }

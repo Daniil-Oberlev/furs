@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
-import { ILinkButton } from './types'
+import { TLinkButton } from './types'
 
 export const LinkButton = ({
   href,
@@ -13,7 +13,7 @@ export const LinkButton = ({
   variant = 'amber',
   size = 'default',
   className
-}: ILinkButton) => {
+}: TLinkButton) => {
   return (
     <Link href={href}>
       <Button

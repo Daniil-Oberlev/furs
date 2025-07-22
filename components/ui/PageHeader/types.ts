@@ -1,6 +1,6 @@
 import type React from 'react'
 
-export interface IPageHeader {
+export interface PageHeaderProps {
   title: string
   description?: string
   children?: React.ReactNode

@@ -9,7 +9,11 @@ import { BadgeProps } from './types'
 export const Badge = ({ className, variant, ...props }: BadgeProps) => {
   return (
     <div
-      className={cn(badgeVariants({ variant }), className)}
+      className={cn(
+        'inline-block rounded-full px-3 py-1 text-xs font-semibold',
+        !className?.includes('bg-') && 'bg-[#cfaf80]',
+        className
+      )}
       {...props}
     />
   )

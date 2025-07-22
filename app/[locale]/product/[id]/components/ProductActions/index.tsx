@@ -21,14 +21,24 @@ export const ProductActions = ({ purchaseLink }: ProductActionsProps) => {
           className='flex-1'
         >
           <Button
-            size='lg'
-            className='w-full bg-amber-700 hover:bg-amber-800 text-stone-100 px-8 py-4 font-semibold'
+            asChild
+            variant='amber'
+            className='w-full font-cormorant text-lg py-3 rounded-lg shadow-md transition-colors duration-200'
           >
-            Купить в ЦУМе
+            <a
+              href={purchaseLink}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Купить в ЦУМе
+            </a>
           </Button>
         </Link>
         <div className='flex-1'>
-          <ConsultationForm buttonText='Записаться на примерку' />
+          <ConsultationForm
+            buttonText='Записаться на примерку'
+            variant='amber'
+          />
         </div>
       </div>
       <div className='text-center'>

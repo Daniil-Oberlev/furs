@@ -4,20 +4,24 @@ import React from 'react'
 import Link from 'next/link'
 
 import { IBreadcrumbs } from './types'
+import { cn } from '@/lib/utils'
 
-export const Breadcrumbs = ({ items }: IBreadcrumbs) => {
+export const Breadcrumbs = ({ items, separator = '/', className }: IBreadcrumbs) => {
   const limitedItems = items.slice(0, 3)
 
   return (
     <nav
       aria-label='Хлебные крошки'
-      className='flex items-center space-x-2 text-stone-600 mb-8 text-base font-inter'
+      className={cn(
+        'flex items-center space-x-2 text-stone-600 mb-8 text-base font-inter',
+        className
+      )}
     >
       {limitedItems.map((item, index) => (
-        <>
-          {index < limitedItems.length - 1 && item.href ? (
+        <React.Fragment key={item.text}>
+          {index > 0 && <span className='select-none'>{separator}</span>}
+          {item.href ? (
             <Link
-              key={`link-${index}`}
               href={item.href}
               className='hover:text-amber-700 transition-colors'
               aria-current={index === limitedItems.length - 1 ? 'page' : undefined}
@@ -25,15 +29,9 @@ export const Breadcrumbs = ({ items }: IBreadcrumbs) => {
               {item.text}
             </Link>
           ) : (
-            <span
-              key={`span-${index}`}
-              className='text-amber-700'
-            >
-              {item.text}
-            </span>
+            <span className='text-amber-700'>{item.text}</span>
           )}
-          {index < limitedItems.length - 1 && <span key={`separator-${index}`}>/</span>}
-        </>
+        </React.Fragment>
       ))}
     </nav>
   )

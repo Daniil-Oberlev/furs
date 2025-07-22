@@ -1,11 +1,11 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-
+import { useState, useEffect, useCallback, useMemo } from 'react'
 import { Menu, X } from 'lucide-react'
 
 import { Logo, NavLinks } from './components'
 import { ContactsModal } from './components/ContactsModal'
+import { useClickOutside } from '@/hooks/useClickOutside'
 
 import { ALL_NAV_LINKS, LEFT_NAV_LINKS, RIGHT_NAV_LINKS } from './components/NavLinks/constants'
 
@@ -13,39 +13,67 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isContactsModalOpen, setIsContactsModalOpen] = useState(false)
 
-  const toggleMenu = () => {
+  const toggleMenu = useCallback(() => {
     setIsMenuOpen(prev => !prev)
-  }
+  }, [])
 
-  const modifiedRightNavLinks = RIGHT_NAV_LINKS.map(link =>
-    link.name === 'Контакты' ? { ...link, onClick: () => setIsContactsModalOpen(true) } : link
+  const openContactsModal = useCallback(() => {
+    setIsContactsModalOpen(true)
+  }, [])
+
+  const closeContactsModal = useCallback(() => {
+    setIsContactsModalOpen(false)
+  }, [])
+
+  const closeMenu = useCallback(() => {
+    setIsMenuOpen(false)
+  }, [])
+
+  const modifiedRightNavLinks = useMemo(
+    () =>
+      RIGHT_NAV_LINKS.map(link =>
+        link.action === 'openContacts' ? { ...link, onClick: openContactsModal } : link
+      ),
+    [openContactsModal]
   )
 
-  const modifiedAllNavLinks = ALL_NAV_LINKS.map(link =>
-    link.name === 'Контакты' ? { ...link, onClick: () => setIsContactsModalOpen(true) } : link
+  const modifiedAllNavLinks = useMemo(
+    () =>
+      ALL_NAV_LINKS.map(link =>
+        link.action === 'openContacts' ? { ...link, onClick: openContactsModal } : link
+      ),
+    [openContactsModal]
   )
 
-  useEffect(() => {
-    const handleEsc = (event: KeyboardEvent) => {
+  const handleKeyDown = useCallback(
+    (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        if (isMenuOpen) setIsMenuOpen(false)
-        if (isContactsModalOpen) setIsContactsModalOpen(false)
+        if (isMenuOpen) closeMenu()
+        if (isContactsModalOpen) closeContactsModal()
       }
-    }
-    window.addEventListener('keydown', handleEsc)
-    return () => window.removeEventListener('keydown', handleEsc)
-  }, [isMenuOpen, isContactsModalOpen])
+    },
+    [isMenuOpen, isContactsModalOpen, closeMenu, closeContactsModal]
+  )
 
   useEffect(() => {
-    document.body.style.overflow = isMenuOpen || isContactsModalOpen ? 'hidden' : 'auto'
+    const shouldPreventScroll = isMenuOpen || isContactsModalOpen
+    document.body.style.overflow = shouldPreventScroll ? 'hidden' : 'auto'
+
     return () => {
       document.body.style.overflow = 'auto'
     }
   }, [isMenuOpen, isContactsModalOpen])
 
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [handleKeyDown])
+
+  const mobileMenuRef = useClickOutside<HTMLDivElement>(closeMenu, { enabled: isMenuOpen })
+
   return (
     <>
-      <header className='bg-stone-100/95 backdrop-blur-sm border-b border-amber-600/20 sticky top-0 z-40'>
+      <header className='bg-velvet border-b border-gold sticky top-0 z-40'>
         <div className='container mx-auto px-4 py-4 flex items-center justify-between relative'>
           <nav className='hidden lg:flex'>
             <NavLinks links={LEFT_NAV_LINKS} />
@@ -62,6 +90,8 @@ export const Header = () => {
           <button
             className='lg:hidden text-stone-700 hover:text-amber-700 transition-colors'
             onClick={toggleMenu}
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            type='button'
           >
             {isMenuOpen ? (
               <X
@@ -78,6 +108,7 @@ export const Header = () => {
         </div>
 
         <div
+          ref={mobileMenuRef}
           className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
             isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
           }`}
@@ -85,7 +116,7 @@ export const Header = () => {
           <nav className='container mx-auto px-4 py-4'>
             <NavLinks
               links={modifiedAllNavLinks}
-              onLinkClick={() => setIsMenuOpen(false)}
+              onLinkClick={closeMenu}
             />
           </nav>
         </div>

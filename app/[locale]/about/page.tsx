@@ -152,7 +152,10 @@ export default function AboutPage() {
                 size='lg'
                 className='bg-white'
               />
-              <ConsultationForm buttonText='Записаться на консультацию' />
+              <ConsultationForm
+                buttonText='Записаться на консультацию'
+                variant='amber'
+              />
             </div>
           </div>
         </section>

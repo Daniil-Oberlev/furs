@@ -1,8 +1,5 @@
 'use client'
 
-import type React from 'react'
-import { useParams } from 'next/navigation'
-
 import { ArrowLeft } from 'lucide-react'
 
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
@@ -14,31 +11,11 @@ import {
   SimilarProducts
 } from './components'
 import { LinkButton } from '@/components/ui/LinkButton'
-
-import { productData } from '@/shared/Products'
+import { useProduct } from './hooks/useProduct'
+import { ROUTES } from '@/config/routes'
 
 export default function ProductPage() {
-  const params = useParams()
-  const productId = Number(params.id)
-  const product = productData[productId]
-
-  const BREADCRUMBS_ITEMS = [
-    { text: 'Главная', href: '/' },
-    { text: 'Каталог', href: '/catalog' },
-    { text: product.name }
-  ]
-
-  const similarProducts = Object.entries(productData)
-    .filter(([id]) => Number(id) !== productId)
-    .map(([id, product]) => ({
-      id: Number(id),
-      name: product.name,
-      furType: product.furType,
-      price: product.price,
-      image: product.images[0],
-      category: product.category,
-      purchaseLink: product.purchaseLink
-    }))
+  const { product, BREADCRUMBS_ITEMS, similarProducts } = useProduct()
 
   if (!product) {
     return <div>Товар не найден</div>
@@ -69,12 +46,14 @@ export default function ProductPage() {
         <SimilarProducts products={similarProducts} />
         <div className='mt-8 text-center'>
           <LinkButton
-            href='/catalog'
-            text='Вернуться к каталогу'
+            href={ROUTES.CATALOG}
             variant='amberOutline'
             icon={<ArrowLeft />}
             iconPosition='left'
-          />
+            text='Вернуться к каталогу'
+          >
+            Вернуться к каталогу
+          </LinkButton>
         </div>
       </div>
     </div>

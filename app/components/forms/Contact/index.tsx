@@ -2,10 +2,11 @@
 
 import type React from 'react'
 import { useState } from 'react'
+
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
 import { Label } from '@/components/ui/label'
+import { Textarea } from '@/components/ui/textarea'
 import { usePhoneInput } from '@/hooks/usePhoneInput'
 
 export const ContactForm = () => {
@@ -178,7 +179,8 @@ export const ContactForm = () => {
 
       <Button
         type='submit'
-        className='w-full bg-amber-700 hover:bg-amber-800 px-6 py-3 text-base'
+        variant='amber'
+        className='w-full px-6 py-3 text-base'
       >
         Отправить сообщение
       </Button>

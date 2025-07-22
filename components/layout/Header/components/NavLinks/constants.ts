@@ -1,15 +1,9 @@
+import { NAVIGATION } from '@/config/constants'
+
 import { NavItem } from './types'
 
-export const LEFT_NAV_LINKS: NavItem[] = [
-  { name: 'Преимущества', url: '#' },
-  { name: 'О нас', url: '/about' },
-  { name: 'Каталог', url: '/catalog' },
-  { name: 'Lookbook', url: '/lookbook' }
-]
+export const LEFT_NAV_LINKS: NavItem[] = [...NAVIGATION.LEFT_LINKS]
 
-export const RIGHT_NAV_LINKS: NavItem[] = [
-  { name: 'Услуги', url: '/#services' },
-  { name: 'Контакты', onClick: () => {} }
-]
+export const RIGHT_NAV_LINKS: NavItem[] = [...NAVIGATION.RIGHT_LINKS]
 
 export const ALL_NAV_LINKS: NavItem[] = [...LEFT_NAV_LINKS, ...RIGHT_NAV_LINKS]

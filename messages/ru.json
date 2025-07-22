@@ -14,5 +14,8 @@
   "buttons": {
     "fitting": "Записаться на примерку",
     "show_catalog": "Посмотреть каталог"
+  },
+  "Consultation": {
+    "callToAction": "Записаться на консультацию"
   }
 }

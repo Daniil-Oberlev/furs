@@ -1,8 +1,7 @@
-interface IBreadcrumbItem {
-  text: string
-  href?: string
-}
+import type React from 'react'
 
 export interface IBreadcrumbs {
-  items: IBreadcrumbItem[]
+  items: { text: string; href?: string }[]
+  separator?: React.ReactNode
+  className?: string
 }

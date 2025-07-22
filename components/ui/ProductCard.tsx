@@ -4,13 +4,15 @@ import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
+import { ROUTES } from '@/config/routes'
+import type { TImage } from '@/config/types'
 
 interface ProductCardProps {
   id: number
   name: string
-  furType: string
+  furType: string[]
   price: string
-  image: string
+  image: string | TImage
   category: string
   purchaseLink: string
   imageHeight?: string
@@ -34,23 +36,23 @@ export function ProductCard({
 }: ProductCardProps) {
   return (
     <Link
-      href={`/product/${id}`}
+      href={ROUTES.PRODUCT(id)}
       key={id}
       aria-label={`Перейти к продукту ${name}`}
     >
       <Card
         className={cn(
-          'bg-white border-stone-200 hover:border-amber-600/40 transition-all duration-300 group shadow-sm hover:shadow-md cursor-pointer',
+          'bg-white border-2 border-[#cfaf80] hover:border-[#cfaf80] transition-all duration-300 group shadow-sm hover:shadow-md cursor-pointer',
           className
         )}
       >
-        <div className='relative overflow-hidden bg-white'>
-          <Badge className='absolute top-3 left-3 z-10 bg-amber-700 text-stone-100 text-sm font-cormorant px-3 py-1'>
+        <div className='relative overflow-hidden'>
+          <Badge className='absolute top-3 left-3 z-10 bg-[#cfaf80] text-velvet text-sm font-cormorant px-3 py-1'>
             {category}
           </Badge>
           <Image
-            src={image}
-            alt={name}
+            src={typeof image === 'string' ? image : image.src}
+            alt={typeof image === 'string' ? name : image.alt}
             width={400}
             height={500}
             className={cn(
@@ -59,17 +61,17 @@ export function ProductCard({
             )}
           />
         </div>
-        <CardContent className={contentPadding}>
+        <CardContent className={cn('bg-velvet', contentPadding)}>
           <h3
-            className={cn('font-medium text-stone-800 mb-1 leading-tight font-cormorant', textSize)}
+            className={cn('font-medium text-truffle mb-1 leading-tight font-cormorant', textSize)}
           >
             {name}
           </h3>
-          <p className='text-sm text-stone-500 mb-3 font-inter'>{furType}</p>
+          <p className='text-sm text-truffle mb-3 font-inter'>{furType.join(', ')}</p>
           <div className='flex items-center justify-between gap-2'>
             <span
               className={cn(
-                'font-semibold text-amber-700 whitespace-nowrap flex-shrink-0 font-playfair',
+                'font-semibold text-truffle whitespace-nowrap flex-shrink-0 font-playfair',
                 textSize
               )}
             >
@@ -82,7 +84,7 @@ export function ProductCard({
             >
               <Button
                 size='sm'
-                className='bg-amber-700 hover:bg-amber-800 text-stone-100 px-3 py-2 text-base font-cormorant font-medium'
+                className='bg-[#cfaf80] hover:bg-[#cfaf80] text-velvet px-3 py-2 text-base font-cormorant font-medium'
               >
                 Купить
               </Button>

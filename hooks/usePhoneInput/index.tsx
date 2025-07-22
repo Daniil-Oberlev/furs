@@ -4,11 +4,8 @@ import React, { useState, useCallback, useMemo } from 'react'
 import { z } from 'zod'
 
 import { ALLOWED_KEYS } from './constants'
-
 import { phoneSchema } from './schema'
-
 import { formatPhoneNumber } from './utils'
-
 import { PhoneInputReturn } from './types'
 
 export const usePhoneInput = (initialValue = ''): PhoneInputReturn => {

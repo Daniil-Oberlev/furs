@@ -73,7 +73,7 @@ export const ConsultationForm = ({
         <Button
           variant={variant}
           size={size}
-          className='text-base'
+          className='w-full font-cormorant text-lg'
         >
           {buttonText}
         </Button>
@@ -185,7 +185,7 @@ export const ConsultationForm = ({
               type='submit'
               variant={variant}
               size='default'
-              className='w-full'
+              className='w-full font-cormorant text-lg'
             >
               Записаться
             </Button>

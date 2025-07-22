@@ -1,5 +1,9 @@
-export const COMPANY_NAME = 'SABLEFUR'
-export const COMPANY_PHONE = '+7 (495) 123-45-67'
-export const COMPANY_PHONE_2 = '+7 (495) 123-45-68'
-export const COMPANY_EMAIL = 'info@sablefur.ru'
-export const SHOP_ADDRESS = 'ТД ЦУМ, г. Москва, ул. Петровка, д. 2'
+import { COMPANY } from '@/config/constants'
+
+export const COMPANY_NAME = COMPANY.NAME
+export const COMPANY_PHONE = COMPANY.PHONE
+export const COMPANY_PHONE_2 = COMPANY.PHONE_2
+export const COMPANY_EMAIL = COMPANY.EMAIL
+export const SHOP_ADDRESS = COMPANY.ADDRESS
+
+export { COMPANY }

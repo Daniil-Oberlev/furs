@@ -3,12 +3,14 @@
 import { ArrowLeft } from 'lucide-react'
 
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
+import { ConsultationButton } from '@/components/ui/ConsultationButton'
 import { LinkButton } from '@/components/ui/LinkButton'
 import { PageHeader } from '@/components/ui/PageHeader'
 import { ProductCard } from '@/components/ui/ProductCard'
 
 import { BREADCRUMBS_ITEMS } from './constants'
 import { productData } from '@/shared/Products'
+import { ROUTES } from '@/config/routes'
 
 const products = Object.entries(productData).map(([id, product]) => ({
   id: Number(id),
@@ -31,6 +33,15 @@ export default function CatalogPage() {
           description='Новая коллекция эксклюзивных шуб из натурального меха высочайшего качества'
         />
 
+        <div className='text-center mb-12'>
+          <ConsultationButton
+            variant='amber'
+            size='lg'
+          >
+            Записаться на примерку
+          </ConsultationButton>
+        </div>
+
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
           {products.map(product => (
             <ProductCard
@@ -45,9 +56,9 @@ export default function CatalogPage() {
             />
           ))}
         </div>
-        <div className='text-center'>
+        <div className='mt-8 text-center'>
           <LinkButton
-            href='/'
+            href={ROUTES.HOME}
             text='Вернуться на главную'
             variant='amberOutline'
             icon={<ArrowLeft />}

@@ -3,9 +3,11 @@ import type React from 'react'
 
 import './globals.css'
 
-export const metadata: Metadata = {
-  title: 'SABLEFUR',
-  description: 'Luxurious fur coats'
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'SABLEFUR',
+    description: 'Luxurious fur coats'
+  }
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

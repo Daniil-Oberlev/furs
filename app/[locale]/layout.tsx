@@ -1,13 +1,16 @@
 import React from 'react'
-import { NextIntlClientProvider } from 'next-intl'
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { Cormorant_Garamond, Inter, Playfair_Display } from 'next/font/google'
-import type { Metadata } from 'next'
+import { NextIntlClientProvider } from 'next-intl'
+import { ErrorBoundary } from 'react-error-boundary'
+
 import '../globals.css'
 import { Head } from '../Head'
 import { Footer, Header } from '@/components/layout'
 import Loading from '../loading'
-import { COMPANY_NAME } from '@/shared/Address'
+
+import { COMPANY } from '@/config/constants'
 
 const inter = Inter({
   subsets: ['latin', 'cyrillic'],
@@ -28,6 +31,11 @@ const cormorant = Cormorant_Garamond({
   display: 'swap'
 })
 
+const messagesMap: Record<string, () => Promise<any>> = {
+  ru: () => import('@/messages/ru.json'),
+  en: () => import('@/messages/en.json')
+}
+
 export async function generateMetadata({
   params
 }: {
@@ -35,41 +43,37 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   let messages
   try {
-    messages = (await import(`../../messages/${params.locale}.json`)).default
+    messages = (await messagesMap[params.locale]()).default
   } catch {
     notFound()
   }
 
+  const title =
+    messages.metadata?.title || `${COMPANY.NAME} - Эксклюзивные шубы из натурального меха | Москва`
+  const description =
+    messages.metadata?.description || 'Роскошные шубы из соболя, норки, каракульчи и кашемира.'
+  const keywords =
+    messages.metadata?.keywords ||
+    'шубы, меховые изделия, соболь, норка, каракульча, кашемир, индивидуальный пошив, примерка шуб, Москва, SABLEFUR'
+
   return {
-    title: messages.metadata?.title || 'SABLEFUR - Эксклюзивные шубы из натурального меха | Москва',
-    description:
-      messages.metadata?.description || 'Роскошные шубы из соболя, норки, каракульчи и кашемира.',
-    keywords:
-      messages.metadata?.keywords ||
-      'шубы, меховые изделия, соболь, норка, каракульча, кашемир, индивидуальный пошив, примерка шуб, Москва, SABLEFUR',
-    authors: [{ name: COMPANY_NAME }],
-    creator: COMPANY_NAME,
-    publisher: COMPANY_NAME,
+    title,
+    description,
+    keywords,
+    authors: [{ name: COMPANY.NAME }],
+    creator: COMPANY.NAME,
+    publisher: COMPANY.NAME,
     robots: 'index, follow',
     openGraph: {
       type: 'website',
       locale: params.locale === 'ru' ? 'ru_RU' : 'en_US',
-      url: `https://sablefur.ru/${params.locale}`,
-      siteName: COMPANY_NAME,
-      title: messages.metadata?.title || `${COMPANY_NAME} - Эксклюзивные шубы из натурального меха`,
-      description:
-        messages.metadata?.description || 'Роскошные шубы из соболя, норки, каракульчи и кашемира.',
-      images: [
-        {
-          url: '/og-image.jpg',
-          width: 1200,
-          height: 630,
-          alt: messages.metadata?.imageAlt || 'SABLEFUR - Эксклюзивные шубы'
-        }
-      ]
+      url: `${COMPANY.WEBSITE}/${params.locale}`,
+      siteName: COMPANY.NAME,
+      title,
+      description
     },
     alternates: {
-      canonical: `https://sablefur.ru/${params.locale}`
+      canonical: `${COMPANY.WEBSITE}/${params.locale}`
     }
   }
 }
@@ -83,7 +87,7 @@ export default async function LocaleLayout({
 }) {
   let messages
   try {
-    messages = (await import(`../../messages/${params.locale}.json`)).default
+    messages = (await messagesMap[params.locale]()).default
   } catch {
     notFound()
   }
@@ -94,15 +98,17 @@ export default async function LocaleLayout({
       <body
         className={`${inter.className} ${inter.variable} ${playfair.variable} ${cormorant.variable} font-sans`}
       >
-        <NextIntlClientProvider
-          locale={params.locale}
-          messages={messages}
-        >
-          <Header />
-          <Loading />
-          <main className='min-h-screen bg-stone-100'>{children}</main>
-          <Footer />
-        </NextIntlClientProvider>
+        <ErrorBoundary fallback={<div>Something went wrong</div>}>
+          <NextIntlClientProvider
+            locale={params.locale}
+            messages={messages}
+          >
+            <Header />
+            <Loading />
+            <main className='min-h-screen bg-stone-100'>{children}</main>
+            <Footer />
+          </NextIntlClientProvider>
+        </ErrorBoundary>
       </body>
     </html>
   )

@@ -8,17 +8,25 @@ import { ChevronLeft, ChevronRight, X } from 'lucide-react'
 import { Badge } from '@/components/ui/Badge'
 import { useClickOutside } from '@/hooks/useClickOutside'
 
-import { IProductImageGallery } from './types'
+import type { ProductImageGalleryProps } from './types'
+import type { TImage } from '@/config/types'
 
-export const ProductImageGallery = ({ images, category, productName }: IProductImageGallery) => {
+export const ProductImageGallery = ({
+  images,
+  category,
+  productName
+}: ProductImageGalleryProps) => {
   const [selectedImage, setSelectedImage] = useState(0)
   const [isGalleryOpen, setIsGalleryOpen] = useState(false)
   const [galleryIndex, setGalleryIndex] = useState(0)
   const imageRef = useRef<HTMLDivElement>(null)
-  const galleryRef = useClickOutside<HTMLDivElement>(() => {
-    setIsGalleryOpen(false)
-    document.body.style.overflow = 'unset'
-  }, isGalleryOpen)
+  const galleryRef = useClickOutside<HTMLDivElement>(
+    () => {
+      setIsGalleryOpen(false)
+      document.body.style.overflow = 'unset'
+    },
+    { enabled: isGalleryOpen }
+  )
 
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     if (!imageRef.current) return
@@ -59,7 +67,7 @@ export const ProductImageGallery = ({ images, category, productName }: IProductI
     [images.length]
   )
 
-  const handleThumbnailClick = (index: number) => (e: React.MouseEvent) => {
+  const handleThumbnailClick = (index: number) => (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation()
     setGalleryIndex(index)
   }
@@ -67,7 +75,7 @@ export const ProductImageGallery = ({ images, category, productName }: IProductI
   return (
     <div className='space-y-4'>
       <div className='relative'>
-        <Badge className='absolute top-4 left-4 z-10 bg-amber-700 text-stone-100 font-cormorant text-sm px-3 py-1'>
+        <Badge className='absolute top-4 left-4 z-10 text-velvet font-cormorant text-sm px-3 py-1'>
           {category}
         </Badge>
         <div
@@ -77,8 +85,8 @@ export const ProductImageGallery = ({ images, category, productName }: IProductI
           onClick={() => openGallery(selectedImage)}
         >
           <Image
-            src={images[selectedImage]}
-            alt={productName}
+            src={images[selectedImage].src}
+            alt={images[selectedImage].alt || productName}
             width={800}
             height={1000}
             className='w-full h-[600px] object-contain rounded-lg transition-transform duration-300 ease-in-out group-hover:scale-200'
@@ -86,7 +94,7 @@ export const ProductImageGallery = ({ images, category, productName }: IProductI
         </div>
       </div>
       <div className='grid grid-cols-4 gap-4'>
-        {images.map((image, index) => (
+        {images.map((image: TImage, index: number) => (
           <button
             key={index}
             onClick={() => setSelectedImage(index)}
@@ -95,8 +103,8 @@ export const ProductImageGallery = ({ images, category, productName }: IProductI
             }`}
           >
             <Image
-              src={image}
-              alt={`${productName} - фото ${index + 1}`}
+              src={image.src}
+              alt={image.alt || `${productName} - фото ${index + 1}`}
               width={200}
               height={200}
               className='w-full h-24 object-cover transition-transform duration-300 hover:scale-105'
@@ -137,8 +145,8 @@ export const ProductImageGallery = ({ images, category, productName }: IProductI
             </button>
             <div className='relative max-w-4xl max-h-full'>
               <Image
-                src={images[galleryIndex]}
-                alt={`${productName} - фото ${galleryIndex + 1}`}
+                src={images[galleryIndex].src}
+                alt={images[galleryIndex].alt || `${productName} - фото ${galleryIndex + 1}`}
                 width={800}
                 height={1000}
                 className='max-w-full max-h-full object-contain'
@@ -151,7 +159,7 @@ export const ProductImageGallery = ({ images, category, productName }: IProductI
               </span>
             </div>
             <div className='absolute bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-2'>
-              {images.map((image, index) => (
+              {images.map((image: TImage, index: number) => (
                 <button
                   key={index}
                   onClick={handleThumbnailClick(index)}
@@ -161,8 +169,8 @@ export const ProductImageGallery = ({ images, category, productName }: IProductI
                   aria-label={`Перейти к изображению ${index + 1}`}
                 >
                   <Image
-                    src={image}
-                    alt={`Thumbnail ${index + 1}`}
+                    src={image.src}
+                    alt={image.alt || `Thumbnail ${index + 1}`}
                     width={64}
                     height={64}
                     className='w-full h-full object-cover'
