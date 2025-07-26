@@ -99,19 +99,19 @@ html {
   scroll-behavior: smooth;
 }
 .rdp-root {
-  --rdp-cell-size: 48px; /* Размер ячеек */
-  --rdp-caption-font-size: 16px; /* Размер заголовка */
-  --rdp-accent-color: #78716c; /* Stone-цвет */
-  --rdp-background-color: #fff; /* Фон */
+  --rdp-cell-size: 48px;
+  --rdp-caption-font-size: 16px;
+  --rdp-accent-color: #78716c;
+  --rdp-background-color: #fff;
   --rdp-day-size: 48px;
   padding: 8px;
-  width: 100%; /* Полная ширина */
-  max-width: 300px; /* Соответствует w-[300px] в PopoverContent */
+  width: 100%;
+  max-width: 300px;
   box-sizing: border-box;
 }
 
 .rdp-day {
-  border-radius: 4px; /* Закруглённые ячейки */
+  border-radius: 4px;
   pointer-events: auto !important;
   cursor: pointer;
 }
