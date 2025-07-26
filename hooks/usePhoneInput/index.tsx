@@ -20,7 +20,10 @@ export const usePhoneInput = (initialValue = ''): PhoneInputReturn => {
       return true
     } catch (err) {
       if (err instanceof z.ZodError) {
-        setError(err.errors[0].message)
+        const errorMessage = err.errors[0].message
+        setError(errorMessage)
+      } else {
+        setError('Неверный формат номера')
       }
       return false
     }
@@ -30,9 +33,9 @@ export const usePhoneInput = (initialValue = ''): PhoneInputReturn => {
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const newValue = formatPhoneNumber(e.target.value)
       setValue(newValue)
-      if (touched) validatePhone(newValue)
+      validatePhone(newValue)
     },
-    [touched, validatePhone]
+    [validatePhone]
   )
 
   const handleBlur = useCallback(() => {
@@ -70,6 +73,7 @@ export const usePhoneInput = (initialValue = ''): PhoneInputReturn => {
       const formatted = formatPhoneNumber(newValue)
       setValue(formatted)
       validatePhone(formatted)
+      setTouched(true)
     },
     reset: () => {
       setValue('')

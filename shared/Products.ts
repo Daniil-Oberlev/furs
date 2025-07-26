@@ -16,8 +16,6 @@ export const validateAndTransformProducts = (rawData: any): ProductData => {
 
     if (validation.success) {
       validatedData[parseInt(id)] = validation.data
-    } else {
-      console.warn(`Product ${id} validation failed:`, validation.error.flatten())
     }
   })
 

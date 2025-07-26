@@ -2,13 +2,14 @@
 
 import type React from 'react'
 
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 
 import { Calendar } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { ConsultationFormContent } from '@/app/components/forms/Consultation/ConsultationFormContent'
 import { Dialog, DialogContent } from '@/components/ui/dialog'
+import { FormData } from '@/app/components/forms/Consultation/types'
 
 interface ConsultationButtonProps {
   variant?: 'default' | 'amber' | 'outline'
@@ -24,8 +25,23 @@ export const ConsultationButton = ({
   children = 'Записаться на приём'
 }: ConsultationButtonProps) => {
   const [isOpen, setIsOpen] = useState(false)
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    phone: '',
+    service: '',
+    date: '',
+    time: ''
+  })
 
   const handleOpen = () => setIsOpen(true)
+  const handleClose = () => setIsOpen(false)
+
+  const handleSubmitSuccess = useCallback(() => {
+    setFormData({ name: '', phone: '', service: '', date: '', time: '' })
+    setTimeout(() => {
+      setIsOpen(false)
+    }, 2500)
+  }, [])
 
   return (
     <>
@@ -50,6 +66,10 @@ export const ConsultationButton = ({
             buttonText='Записаться на примерку'
             variant={variant}
             size={size}
+            onClose={handleClose}
+            formData={formData}
+            onSubmitSuccess={handleSubmitSuccess}
+            isOpen={isOpen}
           />
         </DialogContent>
       </Dialog>

@@ -1,7 +1,3 @@
-import { TypographyH3, TypographyP } from '@/components/ui/typography'
-import { Card, CardContent } from '@/components/ui/card'
-
-import { IProduct } from '@/@types'
 import React from 'react'
 
 interface ProductDetailsProps {
@@ -10,7 +6,6 @@ interface ProductDetailsProps {
 }
 
 export const ProductDetails = ({ description, details }: ProductDetailsProps) => {
-  // Преобразуем характеристики в массив пар [название, значение]
   let detailsPairs: [string, string][] = []
   if (Array.isArray(details)) {
     detailsPairs = details.map(item => {
@@ -23,7 +18,6 @@ export const ProductDetails = ({ description, details }: ProductDetailsProps) =>
   } else if (details && typeof details === 'object') {
     detailsPairs = Object.entries(details).map(([key, value]) => {
       let label = key
-      // Русские подписи для ключей
       switch (key) {
         case 'material':
           label = 'Материал:'
