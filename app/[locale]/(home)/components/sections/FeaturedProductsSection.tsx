@@ -9,7 +9,7 @@ export const FeaturedProductsSection = () => {
   return (
     <section
       id='catalog'
-      className='py-24 bg-stone-50'
+      className='py-12 bg-stone-50'
     >
       <div className='container mx-auto px-4'>
         <div className='text-center mb-12'>
