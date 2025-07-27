@@ -33,7 +33,7 @@ export const FeaturedProductsSection = () => {
         <div className='text-center mt-12'>
           <LinkButton
             href='/catalog'
-            text='Показать все товары'
+            text='Показать все изделия'
             icon={<ArrowRight />}
             size='lg'
           />
