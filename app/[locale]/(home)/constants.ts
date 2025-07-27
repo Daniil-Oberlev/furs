@@ -2,7 +2,7 @@ import { productData } from '@/shared/Products'
 import { IServiceCard } from './components/ServiceCard/types'
 
 export const FEATURE_PRODUCTS = Object.entries(productData)
-  .slice(0, 9)
+  .filter(([id]) => [4, 5, 11].includes(Number(id)))
   .map(([id, product]) => ({
     id: Number(id),
     name: product.name,
