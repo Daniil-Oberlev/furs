@@ -1,8 +1,8 @@
 'use client'
 
+import { ValuesSection, VisitSection } from '@/components/sections'
 import {
   FeaturedProductsSection,
-  AboutSection,
   ServicesSection,
   ContactFormSection,
   ContactsSection,
@@ -14,7 +14,8 @@ export default function HomePage() {
     <>
       <HeroSection />
       <FeaturedProductsSection />
-      <AboutSection />
+      <ValuesSection />
+      <VisitSection />
       <ServicesSection />
       <ContactFormSection />
       <ContactsSection />

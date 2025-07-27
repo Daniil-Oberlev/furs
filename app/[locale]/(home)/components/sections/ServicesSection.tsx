@@ -6,7 +6,7 @@ export const ServicesSection = () => {
   return (
     <section
       id='services'
-      className='py-16 bg-stone-100'
+      className='pb-16 bg-stone-100'
     >
       <div className='container mx-auto px-4'>
         <div className='text-center mb-12'>

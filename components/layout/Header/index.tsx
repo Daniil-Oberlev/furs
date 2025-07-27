@@ -75,7 +75,7 @@ export const Header = () => {
 
   return (
     <>
-      <header className='bg-velvet border-b border-gold sticky top-0 z-40'>
+      <header className='bg-velvet border-b border-[#cfaf80] sticky top-0 z-40'>
         <div className='container mx-auto px-4 py-4 flex items-center justify-between relative'>
           <nav className='hidden lg:flex'>
             <NavLinks links={LEFT_NAV_LINKS} />
@@ -90,7 +90,7 @@ export const Header = () => {
           </nav>
 
           <button
-            className='lg:hidden text-stone-700 hover:text-amber-700 transition-colors'
+            className='lg:hidden text-stone-700 hover:text-[#cfaf80] transition-colors'
             onClick={toggleMenu}
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             type='button'

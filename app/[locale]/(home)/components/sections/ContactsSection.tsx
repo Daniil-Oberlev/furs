@@ -15,7 +15,7 @@ export const ContactsSection = () => {
 
           <div className='space-y-6'>
             <div className='flex items-start space-x-4'>
-              <MapPin className='h-5 w-5 text-amber-400 mt-1' />
+              <MapPin className='h-5 w-5 text-[#cfaf80] mt-1' />
               <div>
                 <TypographyH3 className='font-medium text-stone-100 mb-1 font-cormorant'>
                   Адрес салона
@@ -27,7 +27,7 @@ export const ContactsSection = () => {
             </div>
 
             <div className='flex items-start space-x-4'>
-              <Clock className='h-5 w-5 text-amber-400 mt-1' />
+              <Clock className='h-5 w-5 text-[#cfaf80] mt-1' />
               <div>
                 <TypographyH3 className='font-medium text-stone-100 mb-1 font-cormorant'>
                   Режим работы
@@ -42,7 +42,7 @@ export const ContactsSection = () => {
             </div>
 
             <div className='flex items-start space-x-4'>
-              <Phone className='h-5 w-5 text-amber-400 mt-1' />
+              <Phone className='h-5 w-5 text-[#cfaf80] mt-1' />
               <div>
                 <TypographyH3 className='font-medium text-stone-100 mb-1 font-cormorant'>
                   Телефоны
@@ -61,7 +61,7 @@ export const ContactsSection = () => {
             </div>
 
             <div className='flex items-start space-x-4'>
-              <Mail className='h-5 w-5 text-amber-400 mt-1' />
+              <Mail className='h-5 w-5 text-[#cfaf80] mt-1' />
               <div>
                 <TypographyH3 className='font-medium text-stone-100 mb-1 font-cormorant'>
                   Email
@@ -81,18 +81,18 @@ export const ContactsSection = () => {
             </TypographyH3>
             <div className='space-y-2'>
               <TypographyP className='text-stone-100'>
-                <strong className='text-amber-400'>Доставка:</strong> Бесплатная доставка по Москве
+                <strong className='text-[#cfaf80]'>Доставка:</strong> Бесплатная доставка по Москве
                 при покупке от 300 000 ₽
               </TypographyP>
               <TypographyP className='text-stone-100'>
-                <strong className='text-amber-400'>Возврат:</strong> 14 дней на возврат товара в
+                <strong className='text-[#cfaf80]'>Возврат:</strong> 14 дней на возврат товара в
                 первоначальном состоянии
               </TypographyP>
               <TypographyP className='text-stone-100'>
-                <strong className='text-amber-400'>Гарантия:</strong> 2 года гарантии на все изделия
+                <strong className='text-[#cfaf80]'>Гарантия:</strong> 2 года гарантии на все изделия
               </TypographyP>
               <TypographyP className='text-stone-100'>
-                <strong className='text-amber-400'>Уход:</strong> Бесплатная чистка и уход в течение
+                <strong className='text-[#cfaf80]'>Уход:</strong> Бесплатная чистка и уход в течение
                 первого года
               </TypographyP>
             </div>
