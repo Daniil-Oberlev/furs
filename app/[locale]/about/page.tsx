@@ -64,15 +64,19 @@ export default function AboutPage() {
               </TypographyP>
             </div>
           </div>
-          <div className='relative'>
+          <article className='text-center'>
             <Image
-              src='https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop'
-              alt='Наша мастерская'
+              src='/model.jpg'
+              alt='Пальто с отделкой из баргузинского соболя'
               width={600}
-              height={400}
+              height={900}
               className='rounded-lg shadow-lg'
             />
-          </div>
+            <TypographyP className='mt-4 text-lg text-stone-700 font-cormorant'>
+              Парка из итальянского кашемира с мехом баргузинского соболя. Совмещение тепла, роскоши
+              и минимализма в одной вещи.
+            </TypographyP>
+          </article>
         </div>
       </section>
 
