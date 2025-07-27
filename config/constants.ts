@@ -1,3 +1,5 @@
+import { ROUTES } from './routes'
+
 export const COMPANY = {
   NAME: 'SABLEFUR',
   PHONE: '+7 (495) 123-45-67',
@@ -15,10 +17,10 @@ export const BREAKPOINTS = {
 
 export const NAVIGATION = {
   LEFT_LINKS: [
-    { name: 'Преимущества', url: '#' },
-    { name: 'О нас', url: '/about' },
-    { name: 'Каталог', url: '/catalog' },
-    { name: 'Lookbook', url: '/lookbook' }
+    { name: 'Преимущества', url: `${ROUTES.ABOUT}/#about` },
+    { name: 'О нас', url: ROUTES.ABOUT },
+    { name: 'Каталог', url: ROUTES.CATALOG },
+    { name: 'Lookbook', url: ROUTES.LOOKBOOK }
   ],
   RIGHT_LINKS: [
     { name: 'Услуги', url: '/#services' },
