@@ -7,8 +7,10 @@ import { PageHeaderProps } from './types'
 export const PageHeader = ({ title, description, children, className }: PageHeaderProps) => {
   return (
     <section className={cn('text-center pb-16', className)}>
-      <TypographyH1 className='mb-6'>{title}</TypographyH1>
-      {description && <TypographyP className='mb-8 max-w-3xl mx-auto'>{description}</TypographyP>}
+      <TypographyH1 className='mb-6 text-[#cfaf80]'>{title}</TypographyH1>
+      {description && (
+        <TypographyP className='mb-8 max-w-3xl mx-auto text-white'>{description}</TypographyP>
+      )}
       {children}
     </section>
   )

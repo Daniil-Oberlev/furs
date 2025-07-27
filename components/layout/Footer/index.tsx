@@ -1,8 +1,8 @@
-import { TypographyH3, TypographyH4, TypographyLead } from '@/components/ui/typography'
+import { TypographyH4, TypographyLead } from '@/components/ui/typography'
 
 import { Catalog, Copyright, Services } from './components'
 
-import { COMPANY_NAME } from '@/shared/Address'
+import { Logo } from '@/components/ui/Logo'
 
 // import { COMPANY_EMAIL, COMPANY_PHONE, SHOP_ADDRESS } from '@/shared/Address'
 
@@ -12,7 +12,7 @@ export const Footer = () => {
       <div className='container mx-auto px-4'>
         <div className='grid md:grid-cols-4 gap-8'>
           <div>
-            <TypographyH3 className='text-amber-400 mb-4'>{COMPANY_NAME}</TypographyH3>
+            <Logo />
             <TypographyLead className='text-stone-400 font-cormorant '>
               Роскошные шубы для истинных ценителей качества и стиля
             </TypographyLead>

@@ -112,24 +112,24 @@ export default function AboutPage() {
               Наши ценности
             </TypographyH2>
             <div className='grid md:grid-cols-3 gap-8'>
-              <div>
-                <TypographyH3 className='text-amber-400 mb-4'>Качество</TypographyH3>
+              <article>
+                <TypographyH3 className='text-[#cfaf80] mb-4'>Качество</TypographyH3>
                 <TypographyP className='text-stone-300'>
                   Мы используем только лучшие материалы и проверенные временем техники
                 </TypographyP>
-              </div>
-              <div>
-                <TypographyH3 className='   text-amber-400 mb-4'>Мастерство</TypographyH3>
-                <TypographyP className=' text-stone-300'>
+              </article>
+              <article>
+                <TypographyH3 className='text-[#cfaf80] mb-4'>Мастерство</TypographyH3>
+                <TypographyP className='text-stone-300'>
                   Каждое изделие создается руками опытных мастеров с многолетним стажем
                 </TypographyP>
-              </div>
-              <div>
-                <TypographyH3 className='   text-amber-400 mb-4'>Индивидуальность</TypographyH3>
-                <TypographyP className='  text-stone-300'>
+              </article>
+              <article>
+                <TypographyH3 className='text-[#cfaf80] mb-4'>Индивидуальность</TypographyH3>
+                <TypographyP className='text-stone-300'>
                   Персональный подход к каждому клиенту и его уникальным потребностям
                 </TypographyP>
-              </div>
+              </article>
             </div>
           </div>
         </section>

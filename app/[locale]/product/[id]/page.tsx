@@ -10,8 +10,10 @@ import {
   ProductInfo,
   SimilarProducts
 } from './components'
+
 import { LinkButton } from '@/components/ui/LinkButton'
 import { useProduct } from './hooks/useProduct'
+
 import { ROUTES } from '@/config/routes'
 
 export default function ProductPage() {

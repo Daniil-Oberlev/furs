@@ -21,7 +21,7 @@ export const ProductInfo = ({ name, price }: ProductInfoProps) => {
         </div>
         <span className='text-stone-600 text-base font-inter'>(47 отзывов)</span>
       </div>
-      <div className='text-3xl font-playfair font-light text-amber-700 mb-4'>{price}</div>
+      <div className='text-3xl font-playfair font-light mb-4'>{price}</div>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+
 import Link from 'next/link'
 
 import { IBreadcrumbs } from './types'
@@ -23,13 +24,13 @@ export const Breadcrumbs = ({ items, separator = '/', className }: IBreadcrumbs)
           {item.href ? (
             <Link
               href={item.href}
-              className='hover:text-amber-700 transition-colors'
+              className='hover:text-[#cfaf80] transition-colors'
               aria-current={index === limitedItems.length - 1 ? 'page' : undefined}
             >
               {item.text}
             </Link>
           ) : (
-            <span className='text-amber-700'>{item.text}</span>
+            <span className='text-[#e4b46c]'>{item.text}</span>
           )}
         </React.Fragment>
       ))}

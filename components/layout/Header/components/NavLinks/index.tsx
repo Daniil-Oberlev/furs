@@ -16,14 +16,14 @@ export const NavLinks = memo<INavLinks>(
           {link.url ? (
             <Link
               href={link.url}
-              className='text-gold-metallic hover:text-gold transition-colors duration-200 font-cormorant text-xl'
+              className='text-[#cfaf80] hover:text-gold transition-colors duration-200 font-cormorant text-xl'
               onClick={onLinkClick}
             >
               {link.name}
             </Link>
           ) : (
             <button
-              className='text-gold-metallic hover:text-gold transition-colors duration-200 font-cormorant text-xl'
+              className='text-[#cfaf80] hover:text-gold transition-colors duration-200 font-cormorant text-xl'
               onClick={() => {
                 link.onClick?.()
                 onLinkClick?.()

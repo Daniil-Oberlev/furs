@@ -3,8 +3,10 @@
 import { useState, useEffect, useCallback, useMemo } from 'react'
 import { Menu, X } from 'lucide-react'
 
-import { Logo, NavLinks } from './components'
+import { Logo } from '@/components/ui/Logo'
+import { NavLinks } from './components'
 import { ContactsModal } from './components/ContactsModal'
+
 import { useClickOutside } from '@/hooks/useClickOutside'
 
 import { ALL_NAV_LINKS, LEFT_NAV_LINKS, RIGHT_NAV_LINKS } from './components/NavLinks/constants'

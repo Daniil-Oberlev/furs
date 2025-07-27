@@ -1,6 +1,6 @@
 import { NAVIGATION } from '@/config/constants'
 
-import { NavItem } from './types'
+import { NavItem } from '@/config/types'
 
 export const LEFT_NAV_LINKS: NavItem[] = [...NAVIGATION.LEFT_LINKS]
 

@@ -49,7 +49,7 @@ export const ConsultationButton = ({
         onClick={handleOpen}
         variant={variant}
         size={size}
-        className={`font-cormorant text-xl ${className}`}
+        className={`font-cormorant text-xl w-auto max-w-xs sm:max-w-none ${className}`}
       >
         <Calendar className='mr-2 h-5 w-5' />
         {children}

@@ -13,9 +13,9 @@ export const HeroSection = () => {
     <PageHeader
       title={t('home.header.title')}
       description={t('home.header.description')}
-      className='bg-gradient-to-b from-stone-200 to-stone-100 pt-16'
+      className='bg-[image:linear-gradient(to_bottom,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("/background.jpg")] bg-cover bg-center bg-no-repeat pt-16'
     >
-      <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+      <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
         <ConsultationButton
           variant='amber'
           size='lg'
