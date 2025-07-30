@@ -9,7 +9,7 @@ export const Logo = () => {
       className='text-[#cfaf80] tracking-wider'
     >
       <Image
-        src='./logo.png'
+        src='/logo.png'
         width={150}
         height={128}
         alt='логотип'
