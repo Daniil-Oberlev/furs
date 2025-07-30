@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback, useMemo } from 'react'
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { Menu, X } from 'lucide-react'
 
 import { Logo } from '@/components/ui/Logo'
@@ -14,6 +14,8 @@ import { ALL_NAV_LINKS, LEFT_NAV_LINKS, RIGHT_NAV_LINKS } from './components/Nav
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isContactsModalOpen, setIsContactsModalOpen] = useState(false)
+
+  const menuToggleButtonRef = useRef<HTMLButtonElement>(null)
 
   const toggleMenu = useCallback(() => {
     setIsMenuOpen(prev => !prev)
@@ -71,7 +73,10 @@ export const Header = () => {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [handleKeyDown])
 
-  const mobileMenuRef = useClickOutside<HTMLDivElement>(closeMenu, { enabled: isMenuOpen })
+  const mobileMenuRef = useClickOutside<HTMLDivElement>(closeMenu, {
+    enabled: isMenuOpen,
+    ignore: [menuToggleButtonRef]
+  })
 
   return (
     <>
@@ -90,6 +95,7 @@ export const Header = () => {
           </nav>
 
           <button
+            ref={menuToggleButtonRef}
             className='lg:hidden text-stone-700 hover:text-[#cfaf80] transition-colors'
             onClick={toggleMenu}
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}

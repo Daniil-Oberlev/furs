@@ -7,12 +7,23 @@ import tseslint from 'typescript-eslint'
 
 export default tseslint.config({
   files: ['**/*.{ts,tsx}'],
-  ignores: ['node_modules/', 'dist/', '*.config.js', '*.config.ts', '*.json', '.next/'],
+  ignores: [
+    'node_modules/',
+    'dist/',
+    '*.config.js',
+    '*.config.ts',
+    '*.json',
+    '.next/',
+    'tailwind.config.ts'
+  ],
   languageOptions: {
     parser: tseslint.parser,
     ecmaVersion: 2020,
     sourceType: 'module',
-    globals: globals.browser,
+    globals: {
+      ...globals.browser,
+      process: 'readonly'
+    },
     parserOptions: {
       ecmaFeatures: {
         jsx: true

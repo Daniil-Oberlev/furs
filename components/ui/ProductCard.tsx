@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { memo } from 'react'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
@@ -21,7 +22,7 @@ interface ProductCardProps {
   className?: string
 }
 
-export function ProductCard({
+export const ProductCard = memo(function ProductCard({
   id,
   name,
   furType,
@@ -55,6 +56,9 @@ export function ProductCard({
             alt={typeof image === 'string' ? name : image.alt}
             width={400}
             height={500}
+            loading='lazy'
+            placeholder='blur'
+            blurDataURL='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k='
             className={cn(
               'w-full object-contain group-hover:scale-105 transition-transform duration-300',
               imageHeight
@@ -94,4 +98,4 @@ export function ProductCard({
       </Card>
     </Link>
   )
-}
+})

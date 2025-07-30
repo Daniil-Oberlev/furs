@@ -7,7 +7,7 @@ type UseClickOutsideOptions = {
   enabled?: boolean
   includeTouch?: boolean
   passive?: boolean
-  ignore?: (React.RefObject<HTMLElement> | null)[]
+  ignore?: React.RefObject<HTMLElement>[]
 }
 
 export const useClickOutside = <T extends HTMLElement>(

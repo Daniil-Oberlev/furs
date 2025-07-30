@@ -8,7 +8,6 @@ import { ErrorBoundary } from 'react-error-boundary'
 import '../globals.css'
 import { Head } from '../Head'
 import { Footer, Header } from '@/components/layout'
-import Loading from '../loading'
 
 import { COMPANY } from '@/config/constants'
 
@@ -104,7 +103,6 @@ export default async function LocaleLayout({
             messages={messages}
           >
             <Header />
-            <Loading />
             <main className='min-h-screen bg-stone-100'>{children}</main>
             <Footer />
           </NextIntlClientProvider>

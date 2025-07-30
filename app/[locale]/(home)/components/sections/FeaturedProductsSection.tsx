@@ -1,11 +1,12 @@
 import { ArrowRight } from 'lucide-react'
+import { memo } from 'react'
 
 import { LinkButton } from '@/components/ui/LinkButton'
 import { ProductCard } from '@/components/ui/ProductCard'
 import { TypographyH2, TypographyP } from '@/components/ui/typography'
 import { FEATURE_PRODUCTS } from '../../constants'
 
-export const FeaturedProductsSection = () => {
+export const FeaturedProductsSection = memo(function FeaturedProductsSection() {
   return (
     <section
       id='catalog'
@@ -41,4 +42,4 @@ export const FeaturedProductsSection = () => {
       </div>
     </section>
   )
-}
+})
