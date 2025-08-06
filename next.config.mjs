@@ -33,7 +33,6 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production'
   },
-  swcMinify: true,
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
@@ -42,7 +41,6 @@ const nextConfig = {
     pagesBufferLength: 2
   },
   webpack: (config, { dev, isServer }) => {
-    // Optimize bundle size
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',

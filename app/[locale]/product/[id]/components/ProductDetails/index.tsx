@@ -5,45 +5,50 @@ interface ProductDetailsProps {
   details: string[] | Record<string, string | string[] | null>
 }
 
+const RUS_LABELS: Record<string, string> = {
+  material: 'Материал',
+  lining: 'Подкладка',
+  origin: 'Страна',
+  sizes: 'Размеры',
+  colors: 'Цвет',
+  care: 'Уход'
+}
+
 export const ProductDetails = ({ description, details }: ProductDetailsProps) => {
   let detailsPairs: [string, string][] = []
   if (Array.isArray(details)) {
     detailsPairs = details.map(item => {
       const idx = item.indexOf(':')
       if (idx !== -1) {
-        return [item.slice(0, idx + 1), item.slice(idx + 1).trim()]
+        const englishKey = item.slice(0, idx).trim()
+        const value = item.slice(idx + 1).trim()
+
+        const label = RUS_LABELS[englishKey] || englishKey
+
+        let cleanValue = value
+        if (cleanValue.includes(':')) {
+          const colonIndex = cleanValue.indexOf(':')
+          cleanValue = cleanValue.slice(colonIndex + 1).trim()
+        }
+
+        return [label, cleanValue]
       }
       return [item, '']
     })
   } else if (details && typeof details === 'object') {
     detailsPairs = Object.entries(details).map(([key, value]) => {
-      let label = key
-      switch (key) {
-        case 'material':
-          label = 'Материал:'
-          break
-        case 'lining':
-          label = 'Подкладка:'
-          break
-        case 'origin':
-          label = 'Происхождение:'
-          break
-        case 'sizes':
-          label = 'Размеры:'
-          break
-        case 'colors':
-          label = 'Цвета:'
-          break
-        case 'care':
-          label = 'Уход:'
-          break
-        default:
-          label = key + ':'
-      }
+      const label = RUS_LABELS[key] || key
       let val = Array.isArray(value) ? value.join(', ') : (value ?? '')
+
+      if (typeof val === 'string' && val.includes(':')) {
+        const colonIndex = val.indexOf(':')
+        val = val.slice(colonIndex + 1).trim()
+      }
+
       return [label, val]
     })
   }
+
   return (
     <div className='bg-white rounded-lg p-6 shadow-sm'>
       <h3 className='text-xl font-cormorant font-semibold mb-4 text-stone-800'>Описание</h3>
@@ -52,7 +57,7 @@ export const ProductDetails = ({ description, details }: ProductDetailsProps) =>
       <div className='grid grid-cols-2 gap-y-2 gap-x-4 text-stone-800 text-base font-inter'>
         {detailsPairs.map(([label, value], idx) => (
           <React.Fragment key={idx}>
-            <div className='text-stone-700'>{label}</div>
+            <div className='text-stone-700'>{label}:</div>
             <div className='text-right'>{value}</div>
           </React.Fragment>
         ))}

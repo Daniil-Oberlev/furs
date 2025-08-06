@@ -89,6 +89,8 @@ export const ProductImageGallery = ({
             alt={images[selectedImage].alt || productName}
             width={800}
             height={1000}
+            quality={100}
+            priority
             className='w-full h-[600px] object-contain rounded-lg transition-transform duration-300 ease-in-out group-hover:scale-200'
           />
         </div>
@@ -107,6 +109,7 @@ export const ProductImageGallery = ({
               alt={image.alt || `${productName} - фото ${index + 1}`}
               width={200}
               height={200}
+              quality={100}
               className='w-full h-24 object-cover transition-transform duration-300 hover:scale-105'
             />
           </button>
@@ -149,6 +152,7 @@ export const ProductImageGallery = ({
                 alt={images[galleryIndex].alt || `${productName} - фото ${galleryIndex + 1}`}
                 width={800}
                 height={1000}
+                quality={100}
                 className='max-w-full max-h-full object-contain'
                 priority
               />
@@ -173,6 +177,7 @@ export const ProductImageGallery = ({
                     alt={image.alt || `Thumbnail ${index + 1}`}
                     width={64}
                     height={64}
+                    quality={100}
                     className='w-full h-full object-cover'
                   />
                 </button>
