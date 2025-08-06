@@ -12,7 +12,7 @@ export const VisitSection = ({ hideCatalogButton = false }: { hideCatalogButton?
       </TypographyH2>
       <TypographyP className='font-cormorant text-stone-600 mb-8 max-w-2xl mx-auto'>
         Ознакомиться с коллекцией можно только по предварительной записи. Мы работаем в закрытом
-        формате, где каждая встреча — это персональное внимание и индивидуальный подход. Наши
+        формате, где каждая встреча &mdash; это персональное внимание и индивидуальный подход. Наши
         эксперты помогут подобрать меховое изделие, отражающее именно ваш стиль.
       </TypographyP>
       <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
