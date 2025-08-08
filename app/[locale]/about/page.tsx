@@ -75,8 +75,7 @@ export default function AboutPage() {
               className='rounded-lg shadow-lg'
             />
             <TypographyP className='mt-4 text-lg text-stone-700 font-cormorant'>
-              Парка из итальянского кашемира с мехом баргузинского соболя. Совмещение тепла, роскоши
-              и минимализма в одной вещи.
+              Баргузинский соболь. <br /> Совмещение тепла, роскоши и минимализма в одной вещи.
             </TypographyP>
           </article>
         </div>
