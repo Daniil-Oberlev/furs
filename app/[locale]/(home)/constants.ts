@@ -16,7 +16,7 @@ export const FEATURE_PRODUCTS = Object.entries(productData)
 export const SERVICES: IServiceCard[] = [
   {
     title: 'Персональная примерка',
-    description: 'Индивидуальная примерка в комфортной обстановке нашего салона',
+    description: 'Индивидуальная примерка в комфортной обстановке нашего пространства',
     buttonText: 'Записаться',
     variant: 'amber',
     size: 'default'

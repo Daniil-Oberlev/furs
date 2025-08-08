@@ -18,7 +18,7 @@ export const ContactsSection = () => {
               <MapPin className='h-5 w-5 text-[#cfaf80] mt-1' />
               <div>
                 <TypographyH3 className='font-medium text-stone-100 mb-1 font-cormorant'>
-                  Адрес салона
+                  Адрес нашего пространства
                 </TypographyH3>
                 <TypographyP className='text-stone-200 font-inter text-lg'>
                   {SHOP_ADDRESS}
