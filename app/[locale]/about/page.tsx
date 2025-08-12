@@ -67,6 +67,7 @@ export default function AboutPage() {
               width={600}
               height={900}
               className='rounded-lg shadow-lg'
+              quality={100}
             />
             <TypographyP className='mt-4 text-lg text-stone-700 font-cormorant'>
               Баргузинский соболь. <br /> Совмещение тепла, роскоши и минимализма в одной вещи.

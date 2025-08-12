@@ -8,7 +8,7 @@ export const serviceLabels: Record<string, string> = {
   '': 'Не выбрано'
 }
 
-export const formatTelegramMessage = (data: FormData, locale: string): string => {
+export const formatEmailMessage = (data: FormData, locale: string): string => {
   const formatDate = (date: string) => {
     if (!date) return 'Не выбрано'
     const [year, month, day] = date.split('-')
@@ -24,11 +24,9 @@ export const formatTelegramMessage = (data: FormData, locale: string): string =>
   ].join('\n')
 }
 
-export const sendToTelegram = async (
-  text: string
-): Promise<{ success: boolean; error?: string }> => {
+export const sendToEmail = async (text: string): Promise<{ success: boolean; error?: string }> => {
   try {
-    const response = await fetch('/api/sendToTelegram', {
+    const response = await fetch('/api/sendEmail', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ text })

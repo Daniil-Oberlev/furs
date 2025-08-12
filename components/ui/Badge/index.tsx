@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils'
 
 import { BadgeProps } from './types'
 
-export const Badge = ({ className, variant, ...props }: BadgeProps) => {
+export const Badge = ({ className, ...props }: BadgeProps) => {
   return (
     <div
       className={cn(

@@ -5,10 +5,6 @@ import { COMPANY_NAME, COMPANY_PHONE, SHOP_ADDRESS } from '@/shared/Address'
 export const Head = () => {
   return (
     <head>
-      <meta
-        name='theme-color'
-        content='#d97706'
-      />
       <script
         type='application/ld+json'
         dangerouslySetInnerHTML={{

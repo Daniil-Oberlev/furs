@@ -8,10 +8,13 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
 import { usePhoneInput } from '@/hooks/usePhoneInput'
+import { formatContactEmailMessage, sendContactToEmail } from './utils'
+import { ContactFormData } from './types'
 
 export const ContactForm = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactFormData>({
     name: '',
+    phone: '',
     email: '',
     message: ''
   })
@@ -23,6 +26,7 @@ export const ContactForm = () => {
     email: '',
     message: ''
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const validateEmail = (email: string) => {
     if (!email) return true
@@ -35,7 +39,7 @@ export const ContactForm = () => {
     return phoneRegex.test(phone)
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
     const newErrors = {
@@ -52,14 +56,36 @@ export const ContactForm = () => {
     setErrors(newErrors)
 
     if (!newErrors.name && !newErrors.phone && !newErrors.email && !newErrors.message) {
-      setIsSubmitted(true)
-      setFormData({
-        name: '',
-        email: '',
-        message: ''
-      })
-      phoneInput.reset?.()
-      setTimeout(() => setIsSubmitted(false), 3000)
+      setIsSubmitting(true)
+
+      try {
+        const formDataWithPhone = {
+          ...formData,
+          phone: phoneInput.value
+        }
+
+        const text = formatContactEmailMessage(formDataWithPhone)
+        const result = await sendContactToEmail(text)
+
+        if (result.success) {
+          setIsSubmitted(true)
+          setFormData({
+            name: '',
+            phone: '',
+            email: '',
+            message: ''
+          })
+          phoneInput.reset?.()
+          setTimeout(() => setIsSubmitted(false), 3000)
+        } else {
+          throw new Error(result.error || 'Ошибка отправки')
+        }
+      } catch (error) {
+        console.error('Error sending contact form:', error)
+        // Можно добавить обработку ошибок здесь
+      } finally {
+        setIsSubmitting(false)
+      }
     }
   }
 
@@ -181,8 +207,9 @@ export const ContactForm = () => {
         type='submit'
         variant='amber'
         className='w-full px-6 py-3 text-base'
+        disabled={isSubmitting}
       >
-        Отправить сообщение
+        {isSubmitting ? 'Отправка...' : 'Отправить сообщение'}
       </Button>
     </form>
   )

@@ -5,6 +5,7 @@ import { Catalog, Copyright, Services } from './components'
 import { Logo } from '@/components/ui/Logo'
 
 // import { COMPANY_EMAIL, COMPANY_PHONE, SHOP_ADDRESS } from '@/shared/Address'
+import { COMPANY_EMAIL } from '@/shared/Address'
 
 export const Footer = () => {
   return (
@@ -22,14 +23,14 @@ export const Footer = () => {
           <address>
             <TypographyH4 className='text-stone-200 mb-4'>Контакты</TypographyH4>
             <div className='space-y-2 text-sm text-stone-400 font-inter'>
-              {/*TODO: временно скрыто*/}
-              {/*<a href='tel:${COMPANY_PHONE}'>*/}
-              {/*  <p>{COMPANY_PHONE}</p>*/}
-              {/*</a>*/}
-              {/*<a href='mailto:${COMPANY_EMAIL}'>*/}
-              {/*  <p>{COMPANY_EMAIL}</p>*/}
-              {/*</a>*/}
-              {/*<p>{SHOP_ADDRESS}</p>*/}
+              {/* TODO: временно скрыто*/}
+              {/* <a href='tel:${COMPANY_PHONE}'> */}
+              {/* <p>{COMPANY_PHONE}</p> */}
+              {/* </a> */}
+              <a href='mailto:${COMPANY_EMAIL}'>
+                <p>{COMPANY_EMAIL}</p>
+              </a>
+              {/* <p>{SHOP_ADDRESS}</p> */}
             </div>
           </address>
         </div>

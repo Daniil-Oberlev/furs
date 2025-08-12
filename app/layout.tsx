@@ -8,7 +8,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'SABLEFUR',
     description: 'Luxurious fur coats',
-    metadataBase: new URL('https://sablefur.com'),
+    metadataBase: new URL('https://sablefur.ru'),
     openGraph: {
       title: 'SABLEFUR',
       description: 'Luxurious fur coats',

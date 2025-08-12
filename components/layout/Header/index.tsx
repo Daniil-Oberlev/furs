@@ -1,5 +1,6 @@
 'use client'
 
+import type React from 'react'
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { Menu, X } from 'lucide-react'
 
@@ -75,14 +76,14 @@ export const Header = () => {
 
   const mobileMenuRef = useClickOutside<HTMLDivElement>(closeMenu, {
     enabled: isMenuOpen,
-    ignore: [menuToggleButtonRef]
+    ignore: [menuToggleButtonRef as React.RefObject<HTMLElement>]
   })
 
   return (
     <>
       <header className='bg-velvet border-b border-[#cfaf80] sticky top-0 z-40'>
-        <div className='container mx-auto px-4 py-4 flex items-center justify-between relative'>
-          <nav className='hidden lg:flex'>
+        <div className='container mx-auto px-4 py-4 flex items-center relative'>
+          <nav className='hidden lg:flex flex-1'>
             <NavLinks links={LEFT_NAV_LINKS} />
           </nav>
 
@@ -90,29 +91,31 @@ export const Header = () => {
             <Logo />
           </div>
 
-          <nav className='hidden lg:flex'>
-            <NavLinks links={modifiedRightNavLinks} />
-          </nav>
+          <div className='flex items-center space-x-4 flex-1 justify-end'>
+            <nav className='hidden lg:flex'>
+              <NavLinks links={modifiedRightNavLinks} />
+            </nav>
 
-          <button
-            ref={menuToggleButtonRef}
-            className='lg:hidden text-stone-700 hover:text-[#cfaf80] transition-colors'
-            onClick={toggleMenu}
-            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-            type='button'
-          >
-            {isMenuOpen ? (
-              <X
-                className='w-6 h-6'
-                strokeWidth={2}
-              />
-            ) : (
-              <Menu
-                className='w-6 h-6'
-                strokeWidth={2}
-              />
-            )}
-          </button>
+            <button
+              ref={menuToggleButtonRef}
+              className='lg:hidden text-stone-700 hover:text-[#cfaf80] transition-colors'
+              onClick={toggleMenu}
+              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+              type='button'
+            >
+              {isMenuOpen ? (
+                <X
+                  className='w-6 h-6'
+                  strokeWidth={2}
+                />
+              ) : (
+                <Menu
+                  className='w-6 h-6'
+                  strokeWidth={2}
+                />
+              )}
+            </button>
+          </div>
         </div>
 
         <div
@@ -133,7 +136,9 @@ export const Header = () => {
       <ContactsModal
         isOpen={isContactsModalOpen}
         setIsOpen={setIsContactsModalOpen}
-      />
+      >
+        <div></div>
+      </ContactsModal>
     </>
   )
 }

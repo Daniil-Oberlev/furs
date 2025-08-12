@@ -3,7 +3,7 @@ import { TypographyH2, TypographyH3, TypographyP } from '@/components/ui/typogra
 export const ValuesSection = () => {
   return (
     <section
-      className='container bg-stone-800 rounded-lg p-12 text-center'
+      className='container bg-stone-800 rounded-lg p-12 mt-6 mb-6 text-center'
       id='about'
     >
       <TypographyH2 className='text-4xl font-playfair font-light text-stone-100 mb-8'>

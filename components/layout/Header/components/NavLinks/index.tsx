@@ -10,7 +10,7 @@ export const NavLinks = memo<INavLinks>(
   ({
     links,
     onLinkClick,
-    className = 'flex space-x-8 lg:space-x-8 flex-col lg:flex-row'
+    className = 'flex space-x-8 lg:flex-row flex-col space-y-4 lg:space-y-0'
   }: INavLinks) => (
     <ul className={className}>
       {links.map((link: NavItem) => (
