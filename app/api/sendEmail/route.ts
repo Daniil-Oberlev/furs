@@ -7,10 +7,8 @@ export async function POST(req: Request) {
 
     const config = validateEmailConfig()
 
-    // Создаем экземпляр Resend
     const resend = new Resend(config.apiKey)
 
-    // Отправляем email
     const { data, error } = await resend.emails.send({
       from: config.from,
       to: [config.to],

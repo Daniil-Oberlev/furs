@@ -34,7 +34,23 @@ export const getProductData = (): ProductData => {
         category: 'Премиум',
         images: [
           {
+            src: 'https://st-cdn.tsum.com/sig/0158cc7596ef5a9a0f0318bbd143324c/width/763/i/89/c2/21/ac/8a763147-febc-11ef-b80d-b4969139ea48.jpg',
+            alt: 'Шуба из меха норки'
+          },
+          {
             src: 'https://st-cdn.tsum.com/sig/a693490193ee74af260d9d2d4adb0053/width/763/i/89/c2/21/ac/00d6e8c0-5779-4cc2-8e6c-be8796e4ecba.jpg',
+            alt: 'Шуба из меха норки'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/0541a3a712d59cf550a6b9a5b46e2a6a/width/763/i/89/c2/21/ac/8a81cd35-febc-11ef-b80d-b4969139ea48.jpg',
+            alt: 'Шуба из меха норки'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/917ef953c86e91fb1186c6f26dbc462b/width/763/i/89/c2/21/ac/8aa10718-febc-11ef-b80d-b4969139ea48.jpg',
+            alt: 'Шуба из меха норки'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/f496244208dc7c3e89f47279316046ab/width/763/i/89/c2/21/ac/8aab02bd-febc-11ef-b80d-b4969139ea48.jpg',
             alt: 'Шуба из меха норки'
           }
         ],
@@ -58,11 +74,11 @@ export const getProductData = (): ProductData => {
         category: 'Премиум',
         images: [
           {
-            src: 'https://st-cdn.tsum.com/sig/72f8c4aece9d719471ef42db8d09fcef/width/763/i/78/73/6b/bc/8a2e994d-60af-40e5-a58e-7a6bd3371af1.jpg',
+            src: 'https://st-cdn.tsum.com/sig/6168ff404853299e35ab4cf75e9c3dc8/width/763/i/78/73/6b/bc/92920923-fdbc-478f-973b-65c9394db7d4.jpg',
             alt: 'Шуба из свакары'
           },
           {
-            src: 'https://st-cdn.tsum.com/sig/6168ff404853299e35ab4cf75e9c3dc8/width/763/i/78/73/6b/bc/92920923-fdbc-478f-973b-65c9394db7d4.jpg',
+            src: 'https://st-cdn.tsum.com/sig/72f8c4aece9d719471ef42db8d09fcef/width/763/i/78/73/6b/bc/8a2e994d-60af-40e5-a58e-7a6bd3371af1.jpg',
             alt: 'Шуба из свакары'
           },
           {
@@ -113,11 +129,11 @@ export const getProductData = (): ProductData => {
         category: 'Премиум',
         images: [
           {
-            src: 'https://st-cdn.tsum.com/sig/a9d9d7206f585af850b5179a29dfa6f4/width/763/i/ba/f4/9a/ae/82d606ba-71b9-42bf-a90f-7746792d407d.jpg',
+            src: 'https://st-cdn.tsum.com/sig/1b61d32937a2c1d1ffd66b5f5e08109d/width/763/i/ba/f4/9a/ae/96c3b72f-d448-4798-9ff1-e339edd87002.jpg',
             alt: 'Шуба из меха норки'
           },
           {
-            src: 'https://st-cdn.tsum.com/sig/1b61d32937a2c1d1ffd66b5f5e08109d/width/763/i/ba/f4/9a/ae/96c3b72f-d448-4798-9ff1-e339edd87002.jpg',
+            src: 'https://st-cdn.tsum.com/sig/a9d9d7206f585af850b5179a29dfa6f4/width/763/i/ba/f4/9a/ae/82d606ba-71b9-42bf-a90f-7746792d407d.jpg',
             alt: 'Шуба из меха норки'
           },
           {
@@ -172,11 +188,11 @@ export const getProductData = (): ProductData => {
         category: 'Премиум',
         images: [
           {
-            src: 'https://st-cdn.tsum.com/sig/00df97cdd867aca860ad1bd09879bcae/width/763/i/25/2c/b9/6a/fcd348a7-af06-4f73-84ba-8c230a5658b5.jpg',
+            src: 'https://st-cdn.tsum.com/sig/a0ff57e25a984dfa744b25ab7af62634/width/763/i/25/2c/b9/6a/1b83f2a4-ae3d-4682-bc67-dec039b73643.jpg',
             alt: 'Шуба из меха оцелота и соболя'
           },
           {
-            src: 'https://st-cdn.tsum.com/sig/a0ff57e25a984dfa744b25ab7af62634/width/763/i/25/2c/b9/6a/1b83f2a4-ae3d-4682-bc67-dec039b73643.jpg',
+            src: 'https://st-cdn.tsum.com/sig/00df97cdd867aca860ad1bd09879bcae/width/763/i/25/2c/b9/6a/fcd348a7-af06-4f73-84ba-8c230a5658b5.jpg',
             alt: 'Шуба из меха оцелота и соболя'
           },
           {
@@ -223,11 +239,11 @@ export const getProductData = (): ProductData => {
         category: 'Премиум',
         images: [
           {
-            src: 'https://st-cdn.tsum.com/sig/954cca37fe936430f872807f98897cbf/width/763/i/20/77/23/d7/e922eae2-22ea-424a-8789-682b60e136d1.jpg',
+            src: 'https://st-cdn.tsum.com/sig/06c99012d250569120e4911e098f067f/width/763/i/20/77/23/d7/5583010c-9577-4e55-a08f-14205148ffdd.jpg',
             alt: 'Шуба из меха лисы'
           },
           {
-            src: 'https://st-cdn.tsum.com/sig/06c99012d250569120e4911e098f067f/width/763/i/20/77/23/d7/5583010c-9577-4e55-a08f-14205148ffdd.jpg',
+            src: 'https://st-cdn.tsum.com/sig/954cca37fe936430f872807f98897cbf/width/763/i/20/77/23/d7/e922eae2-22ea-424a-8789-682b60e136d1.jpg',
             alt: 'Шуба из меха лисы'
           },
           {
@@ -274,11 +290,11 @@ export const getProductData = (): ProductData => {
         category: 'Премиум',
         images: [
           {
-            src: 'https://st-cdn.tsum.com/sig/3c03c356444d74ef8dd334ce02693ce5/width/763/i/f0/9b/f7/c4/801cd0d5-1f3f-4755-bebe-f8a993d1efb7.jpg',
+            src: 'https://st-cdn.tsum.com/sig/1d8f43d0a18a41a3b59bb510773fdca3/width/763/i/f0/9b/f7/c4/44932dd8-4b01-4848-9b16-20c576003d56.jpg',
             alt: 'Шуба из каракульчи'
           },
           {
-            src: 'https://st-cdn.tsum.com/sig/1d8f43d0a18a41a3b59bb510773fdca3/width/763/i/f0/9b/f7/c4/44932dd8-4b01-4848-9b16-20c576003d56.jpg',
+            src: 'https://st-cdn.tsum.com/sig/3c03c356444d74ef8dd334ce02693ce5/width/763/i/f0/9b/f7/c4/801cd0d5-1f3f-4755-bebe-f8a993d1efb7.jpg',
             alt: 'Шуба из каракульчи'
           },
           {
@@ -325,11 +341,11 @@ export const getProductData = (): ProductData => {
         category: 'Премиум',
         images: [
           {
-            src: 'https://st-cdn.tsum.com/sig/f6bffa16ebb2e2359bd320381e45e26c/width/763/i/fc/65/ff/c2/fc65ffc2-0125-3754-9502-b34c706e38f3.jpg',
+            src: 'https://st-cdn.tsum.com/sig/174730c95b5d095ed1cfdbabc9199d46/width/763/i/61/e1/ce/68/61e1ce68-26a6-3cce-a3c2-93f521b9fc1f.jpg',
             alt: 'Шуба из меха соболя'
           },
           {
-            src: 'https://st-cdn.tsum.com/sig/174730c95b5d095ed1cfdbabc9199d46/width/763/i/61/e1/ce/68/61e1ce68-26a6-3cce-a3c2-93f521b9fc1f.jpg',
+            src: 'https://st-cdn.tsum.com/sig/f6bffa16ebb2e2359bd320381e45e26c/width/763/i/fc/65/ff/c2/fc65ffc2-0125-3754-9502-b34c706e38f3.jpg',
             alt: 'Шуба из меха соболя'
           },
           {
@@ -372,11 +388,11 @@ export const getProductData = (): ProductData => {
         category: 'Премиум',
         images: [
           {
-            src: 'https://st-cdn.tsum.com/sig/dd70c4add5fb3cb0a6c30295a73dd51e/width/763/i/12/bf/b6/fa/12bfb6fa-02ce-36be-a11f-c9674922633d.jpg',
+            src: 'https://st-cdn.tsum.com/sig/34b26d7200de81cdef6acdff9884593e/width/763/i/c9/e8/7a/69/c9e87a69-ec25-37dd-9e4f-6249166198f4.jpg',
             alt: 'Шуба из меха оцелота'
           },
           {
-            src: 'https://st-cdn.tsum.com/sig/34b26d7200de81cdef6acdff9884593e/width/763/i/c9/e8/7a/69/c9e87a69-ec25-37dd-9e4f-6249166198f4.jpg',
+            src: 'https://st-cdn.tsum.com/sig/dd70c4add5fb3cb0a6c30295a73dd51e/width/763/i/12/bf/b6/fa/12bfb6fa-02ce-36be-a11f-c9674922633d.jpg',
             alt: 'Шуба из меха оцелота'
           },
           {
@@ -419,11 +435,11 @@ export const getProductData = (): ProductData => {
         category: 'Премиум',
         images: [
           {
-            src: 'https://st-cdn.tsum.com/sig/41f671cdfd2621725d2c7ecd8bf9ba5d/width/763/i/c2/4c/11/47/c24c1147-a526-35c1-b1fd-04cd25d469fd.jpg',
+            src: 'https://st-cdn.tsum.com/sig/4258d374e18234f8a459f83bd47213f8/width/763/i/07/19/57/f7/071957f7-c89e-3874-902f-c1359d1f7d0d.jpg',
             alt: 'Шуба из меха соболя'
           },
           {
-            src: 'https://st-cdn.tsum.com/sig/4258d374e18234f8a459f83bd47213f8/width/763/i/07/19/57/f7/071957f7-c89e-3874-902f-c1359d1f7d0d.jpg',
+            src: 'https://st-cdn.tsum.com/sig/41f671cdfd2621725d2c7ecd8bf9ba5d/width/763/i/c2/4c/11/47/c24c1147-a526-35c1-b1fd-04cd25d469fd.jpg',
             alt: 'Шуба из меха соболя'
           },
           {
@@ -466,11 +482,11 @@ export const getProductData = (): ProductData => {
         category: 'Премиум',
         images: [
           {
-            src: 'https://st-cdn.tsum.com/sig/9602903c424c5d0f5a4a1cde8836b909/width/763/i/a9/45/de/f1/a945def1-875c-3f71-9abe-7cde919559b5.jpg',
+            src: 'https://st-cdn.tsum.com/sig/55a48123dbb0717aca52a77436a4e985/width/763/i/f3/3c/25/35/f33c2535-04b1-34b4-beac-410c79c73713.jpg',
             alt: 'Шуба из меха оцелота и соболя'
           },
           {
-            src: 'https://st-cdn.tsum.com/sig/55a48123dbb0717aca52a77436a4e985/width/763/i/f3/3c/25/35/f33c2535-04b1-34b4-beac-410c79c73713.jpg',
+            src: 'https://st-cdn.tsum.com/sig/9602903c424c5d0f5a4a1cde8836b909/width/763/i/a9/45/de/f1/a945def1-875c-3f71-9abe-7cde919559b5.jpg',
             alt: 'Шуба из меха оцелота и соболя'
           },
           {
@@ -513,11 +529,11 @@ export const getProductData = (): ProductData => {
         category: 'Премиум',
         images: [
           {
-            src: 'https://st-cdn.tsum.com/sig/fb613a90cb74b367dbc11a8b44b9134f/width/763/i/e1/13/26/a6/e11326a6-ba76-3115-b429-8aac1cd37297.jpg',
+            src: 'https://st-cdn.tsum.com/sig/1dd5255ddcd0c89311bf2fbcc1ca51ba/width/763/i/82/13/7e/e8/82137ee8-0d36-3693-945d-301ed94a34bf.jpg',
             alt: 'Шуба из меха соболя'
           },
           {
-            src: 'https://st-cdn.tsum.com/sig/1dd5255ddcd0c89311bf2fbcc1ca51ba/width/763/i/82/13/7e/e8/82137ee8-0d36-3693-945d-301ed94a34bf.jpg',
+            src: 'https://st-cdn.tsum.com/sig/fb613a90cb74b367dbc11a8b44b9134f/width/763/i/e1/13/26/a6/e11326a6-ba76-3115-b429-8aac1cd37297.jpg',
             alt: 'Шуба из меха соболя'
           },
           {
@@ -560,11 +576,11 @@ export const getProductData = (): ProductData => {
         category: 'Премиум',
         images: [
           {
-            src: 'https://st-cdn.tsum.com/sig/c9273735c0eea0ccc7a800ee5e692523/width/763/i/a4/d6/46/67/a4d64667-a65d-3c74-bac9-b74cee46854f.jpg',
+            src: 'https://st-cdn.tsum.com/sig/561c6a2aa401426f7348a904cf221aa4/width/763/i/8e/52/8d/52/8e528d52-7edb-331d-a4b6-9b32c878b70e.jpg',
             alt: 'Шуба из меха соболя'
           },
           {
-            src: 'https://st-cdn.tsum.com/sig/561c6a2aa401426f7348a904cf221aa4/width/763/i/8e/52/8d/52/8e528d52-7edb-331d-a4b6-9b32c878b70e.jpg',
+            src: 'https://st-cdn.tsum.com/sig/c9273735c0eea0ccc7a800ee5e692523/width/763/i/a4/d6/46/67/a4d64667-a65d-3c74-bac9-b74cee46854f.jpg',
             alt: 'Шуба из меха соболя'
           },
           {
@@ -607,11 +623,11 @@ export const getProductData = (): ProductData => {
         category: 'Премиум',
         images: [
           {
-            src: 'https://st-cdn.tsum.com/sig/5ea9fb103820cde7ca90624ebddeb98a/width/763/i/a7/3f/b7/c6/a73fb7c6-a45c-35ac-b5e5-fe0752153d7a.jpg',
+            src: 'https://st-cdn.tsum.com/sig/0fcbf24bd4c28001fef02f49ebdff926/width/763/i/6b/80/27/e7/6b8027e7-d6eb-34e0-b0e2-6e3b0d701374.jpg',
             alt: 'Шуба из меха соболя'
           },
           {
-            src: 'https://st-cdn.tsum.com/sig/0fcbf24bd4c28001fef02f49ebdff926/width/763/i/6b/80/27/e7/6b8027e7-d6eb-34e0-b0e2-6e3b0d701374.jpg',
+            src: 'https://st-cdn.tsum.com/sig/5ea9fb103820cde7ca90624ebddeb98a/width/763/i/a7/3f/b7/c6/a73fb7c6-a45c-35ac-b5e5-fe0752153d7a.jpg',
             alt: 'Шуба из меха соболя'
           },
           {
@@ -645,6 +661,670 @@ export const getProductData = (): ProductData => {
         ],
         purchaseLink:
           'https://www.tsum.ru/product/he00798295-shuba-iz-mekha-sobolya-sablefur-temno-korichnevyi/'
+      },
+      14: {
+        name: 'Кашемировое пальто с отделкой из меха соболя',
+        furType: ['кашемир'],
+        additionalMaterial: 'Отделка-мех/соболь',
+        price: '1 254 000 ₽',
+        category: 'Премиум',
+        images: [
+          {
+            src: 'https://st-cdn.tsum.com/sig/08805e64d368907530d7573c60d1102a/width/763/i/eb/5c/8f/4f/5184140d-8966-4a9a-9f2e-e9cf450df074.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха соболя'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/88f466b6d55426d12a77003dd63468ee/width/763/i/eb/5c/8f/4f/24281d05-4688-498f-91aa-a5c1a3c7198d.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха соболя'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/639260f665bedf82013c6c352b7487b4/width/763/i/eb/5c/8f/4f/ad0ac5d4-faad-4a6f-944f-00e8ff07d97d.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха соболя'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/6ae2faa3494abcaf1fb6e747e3ed8b52/width/763/i/eb/5c/8f/4f/be55e122-8698-44a3-b92c-a437db76fe03.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха соболя'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/b74f4b7be92adcb67fb37b3271758dc7/width/763/i/eb/5c/8f/4f/74e3d6bf-8ec5-4d4d-95f2-cb5227fe3b57.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха соболя'
+          }
+        ],
+        description:
+          'Кашемировое пальто с узким кожаным кантом на манжетах и по краям накладных карманов дополнили поясом, продетым в кулиску на спинке. Спереди модель отделали тонко выделанным мехом соболя.',
+        details: {
+          material: 'Кашемир: 100%',
+          lining: 'Отделка-мех/соболь/: 100%',
+          origin: 'Россия',
+          sizes: '42-74',
+          colors: ['Фиолетовый'],
+          care: 'Профессиональная чистка'
+        },
+        features: [
+          '100% натуральный мех высочайшего качества',
+          'Ручная работа мастеров с многолетним опытом',
+          'Эксклюзивный дизайн',
+          'Индивидуальная подгонка по фигуре'
+        ],
+        purchaseLink:
+          'https://www.tsum.ru/product/he00897331-kashemirovoe-palto-s-otdelkoi-iz-mekha-sobolya-sablefur-fioletovyi/?sizeId=14231154'
+      },
+      15: {
+        name: 'Кашемировое пальто с отделкой из меха норки',
+        furType: ['кашемир'],
+        additionalMaterial: 'Отделка-мех/норка',
+        price: '1 112 000 ₽',
+        category: 'Премиум',
+        images: [
+          {
+            src: 'https://st-cdn.tsum.com/sig/3fd1951ac0a27c99c495a8ac18f08a1b/width/763/i/e9/0b/1e/e3/0f9a7af4-6139-4e26-99cc-303eeb7fa487.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха норки'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/08cbf70abd79de5285b69c1d1470f89e/width/763/i/e9/0b/1e/e3/c768c6ec-b0ad-4c7a-915f-06981f173c57.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха норки'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/ffb5ebfe118300040cf844b109d073d1/width/763/i/e9/0b/1e/e3/ae1ef955-3902-4718-a2fe-302b2db72c25.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха норки'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/88257b91d5b52094e5ea6aadf01080b9/width/763/i/e9/0b/1e/e3/7ec32b72-5c81-4d65-b34e-29fa17a14176.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха норки'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/f9af11aa2fc5352dc2822b3352f64139/width/763/i/e9/0b/1e/e3/dacd9216-8881-4f38-af0c-a7c0f54d2838.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха норки'
+          }
+        ],
+        description:
+          'Пальто с рукавами реглан и боковыми карманами сшили из плотного кашемира. Спереди модель дополнили отделкой с диагональным узором, выполненной из тонко выделанного меха соболя. В комплекте &mdash; пояс-лента.',
+        details: {
+          material: 'Кашемир: 100%',
+          lining: 'Отделка-мех/норка/: 100%',
+          origin: 'Россия',
+          sizes: '42-74',
+          colors: ['Бежевый'],
+          care: 'Профессиональная чистка'
+        },
+        features: [
+          '100% натуральный мех высочайшего качества',
+          'Ручная работа мастеров с многолетним опытом',
+          'Эксклюзивный дизайн',
+          'Индивидуальная подгонка по фигуре'
+        ],
+        purchaseLink:
+          'https://www.tsum.ru/product/he00897333-kashemirovoe-palto-s-otdelkoi-iz-mekha-norki-sablefur-bezhevyi/?sizeId=14231167'
+      },
+      16: {
+        name: 'Кашемировое пальто с отделкой из меха соболя',
+        furType: ['кашемир'],
+        additionalMaterial: 'Отделка-мех/соболь',
+        price: '1 254 000 ₽',
+        category: 'Премиум',
+        images: [
+          {
+            src: 'https://st-cdn.tsum.com/sig/5c0a08050244cd33ec8048ea784b4565/width/763/i/d2/0f/97/22/10aaede5-e2af-424f-a7d8-0bf2db42a439.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха соболя'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/3c3722e909b20dcd59d0e51ec6544b39/width/763/i/d2/0f/97/22/dd640019-9ed0-4bc9-ab89-516a736c2afd.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха соболя'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/b1c7625fd4df33e58036eef3693bb7c1/width/763/i/d2/0f/97/22/feb87ceb-487e-4089-8f49-85223fbe6cef.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха соболя'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/af538393838fe23558b08180618eecbf/width/763/i/d2/0f/97/22/bcaf4b6b-fcdb-494c-9ef8-9ea03bab332c.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха соболя'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/98ac9685ca22a7455d980a5823a0d536/width/763/i/d2/0f/97/22/49a0fcef-b599-484f-be75-0ffd7cd24f1f.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха соболя'
+          }
+        ],
+        description:
+          'Кашемировое пальто с двумя накладными карманами дополнили поясом с кисточками, продетым в кулиску на спинке. Отделку полочек выполнили из меха соболя породы «Черный» из собственного зверохозяйства марки.',
+        details: {
+          material: 'Кашемир: 100%',
+          lining: 'Отделка-мех/соболь/: 100%',
+          origin: 'Россия',
+          sizes: '42-74',
+          colors: ['Кремовый'],
+          care: 'Профессиональная чистка'
+        },
+        features: [
+          '100% натуральный мех высочайшего качества',
+          'Ручная работа мастеров с многолетним опытом',
+          'Эксклюзивный дизайн',
+          'Индивидуальная подгонка по фигуре'
+        ],
+        purchaseLink:
+          'https://www.tsum.ru/product/he00900280-kashemirovoe-palto-s-otdelkoi-iz-mekha-sobolya-sablefur-kremovyi/?sizeId=14231166'
+      },
+      17: {
+        name: 'Кашемировое пальто с отделкой из меха соболя',
+        furType: ['кашемир'],
+        additionalMaterial: 'Отделка-мех/соболь',
+        price: '1 254 000 ₽',
+        category: 'Премиум',
+        images: [
+          {
+            src: 'https://st-cdn.tsum.com/sig/2cc2c4ec0508c3ac75c3a3a81991e614/width/763/i/c1/b8/aa/5c/80e99af4-aa05-447a-b397-3c1de745853c.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха соболя'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/1c8afaf2c67169ee3c705d341d23b61f/width/763/i/c1/b8/aa/5c/bf11172a-14bb-4664-b910-fa53ce062e53.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха соболя'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/11c2d4ccde5e7e5151a6166a97084cab/width/763/i/c1/b8/aa/5c/072d9fa0-bb1c-446b-b180-c788e10d7c10.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха соболя'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/4162a791cd1578abc4208a622ade17b4/width/763/i/c1/b8/aa/5c/26f580d5-893a-4e4f-a33d-8097584dd227.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха соболя'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/9ae9fef1ef6be7e8b18ff4759543bef1/width/763/i/c1/b8/aa/5c/6f7b49e9-7528-49bf-bfad-72a8f0e05480.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха соболя'
+          }
+        ],
+        description:
+          'Пальто с накладными карманами и узким кожаным поясом, продетым кулиску на спинке, сшили из кашемировой ткани с диагональным плетением. Края полочек дополнили отделкой, выполненной из выделанного вручную меха черного соболя.',
+        details: {
+          material: 'Кашемир: 100%',
+          lining: 'Отделка-мех/соболь/: 100%',
+          origin: 'Россия',
+          sizes: '42-74',
+          colors: ['Темно-синий'],
+          care: 'Профессиональная чистка'
+        },
+        features: [
+          '100% натуральный мех высочайшего качества',
+          'Ручная работа мастеров с многолетним опытом',
+          'Эксклюзивный дизайн',
+          'Индивидуальная подгонка по фигуре'
+        ],
+        purchaseLink:
+          'https://www.tsum.ru/product/he00900281-kashemirovoe-palto-s-otdelkoi-iz-mekha-sobolya-sablefur-temno-sinii/?sizeId=14231169'
+      },
+      18: {
+        name: 'Кашемировая парка с подкладкой из меха соболя и норки',
+        furType: ['кашемир'],
+        additionalMaterial: 'Отделка-мех/соболь; Подкладка-мех/норка',
+        price: '1 920 000 ₽',
+        category: 'Премиум',
+        images: [
+          {
+            src: 'https://st-cdn.tsum.com/sig/b9722f81b5a06cfbebb586ee3f09312e/width/763/i/cb/fa/e6/09/69817f53-1d72-42db-925e-d740c610e9a9.jpg',
+            alt: 'Кашемировая парка с подкладкой из меха соболя и норки'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/a90d3a0e8d57043a48fd1ea40ca05bc6/width/763/i/cb/fa/e6/09/3bd8f952-26f4-45a1-ac9b-ba70a8358d53.jpg',
+            alt: 'Кашемировая парка с подкладкой из меха соболя и норки'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/97433681eadf25e5c5c5c2e174f0e734/width/763/i/cb/fa/e6/09/ceb5bfad-edae-40e1-8fb1-bfb9384c7464.jpg',
+            alt: 'Кашемировая парка с подкладкой из меха соболя и норки'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/ed5736bee091aa35cd49faa773a27df5/width/763/i/cb/fa/e6/09/a7177d5c-6eb5-4771-bf93-1372cde3b767.jpg',
+            alt: 'Кашемировая парка с подкладкой из меха соболя и норки'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/8ac53779f13a1ec586a64dc2ca5a477d/width/763/i/cb/fa/e6/09/e6c43e12-320c-48ae-b624-b8fcf00a4fb0.jpg',
+            alt: 'Кашемировая парка с подкладкой из меха соболя и норки'
+          }
+        ],
+        description:
+          'Парку из кашемира с шевронным узором утеплили мехом норки, а для отделки капюшона и манжет с молниями использовали неокрашенного соболя. Проймы рукавов реглан и боковые карманы укреплены кожей. Приталенный силуэт сформировали с помощью пояса-ленты, пропущенного сквозь кулиску.',
+        details: {
+          material: 'Кашемир: 100%',
+          lining: 'Подкладка-мех/соболь/: 100%; Подкладка-мех/норка/: 100%;',
+          origin: 'Россия',
+          sizes: '42-74',
+          colors: ['Серый'],
+          care: 'Профессиональная чистка'
+        },
+        features: [
+          '100% натуральный мех высочайшего качества',
+          'Ручная работа мастеров с многолетним опытом',
+          'Эксклюзивный дизайн',
+          'Индивидуальная подгонка по фигуре'
+        ],
+        purchaseLink:
+          'https://www.tsum.ru/product/he00900279-kashemirovaya-parka-s-podkladkoi-iz-mekha-sobolya-i-norki-sablefur-seryi/?sizeId=14229867'
+      },
+      19: {
+        name: 'Жилет из меха соболя',
+        furType: ['соболь'],
+        additionalMaterial: 'Подкладка-вискоза',
+        price: '1 067 000 ₽',
+        category: 'Премиум',
+        images: [
+          {
+            src: 'https://st-cdn.tsum.com/sig/f762763a5cfb88a49932b71aee1b983c/width/763/i/d4/b9/3c/79/2458a104-2bce-46e2-a450-20124a01de54.jpg',
+            alt: 'Жилет из меха соболя'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/96e93b53af5c9f0ccdace18d6a3e38a9/width/763/i/d4/b9/3c/79/9f981068-398b-4984-85e7-059857d30842.jpg',
+            alt: 'Жилет из меха соболя'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/207aa4c6ba5e1db8c5c57cce38c80a96/width/763/i/d4/b9/3c/79/2c5b5351-5d18-4afe-8cd2-9b84e4a14352.jpg',
+            alt: 'Жилет из меха соболя'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/d34c0c6d2a5c9f99168138b316d253bd/width/763/i/d4/b9/3c/79/364fbf92-57b9-4ef2-bbb3-23fae839999b.jpg',
+            alt: 'Жилет из меха соболя'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/341dfaac2bc489ff23d13a5b1456f29f/width/763/i/d4/b9/3c/79/1caf5018-6ce3-4e68-99dc-0a0ec9e4af99.jpg',
+            alt: 'Жилет из меха соболя'
+          }
+        ],
+        description:
+          'Жилет благородного кофейного оттенка выполнили из мягкого меха соболя, который славится своей способностью сохранять тепло. Чтобы изделие комфортно садилось по фигуре и не утяжеляло силуэт, пушнину тонко выделали, сделав ее легче и пластичнее. Бежевый подклад, чуть более длинный, чем основная часть, сшили из шелковистой вискозы.',
+        details: {
+          material: 'Мех соболь: 100%',
+          lining: 'Подкладка-вискоза: 100%',
+          origin: 'Россия',
+          sizes: '42-74',
+          colors: ['Темно-коричневый'],
+          care: 'Профессиональная чистка'
+        },
+        features: [
+          '100% натуральный мех высочайшего качества',
+          'Ручная работа мастеров с многолетним опытом',
+          'Эксклюзивный дизайн',
+          'Индивидуальная подгонка по фигуре'
+        ],
+        purchaseLink:
+          'https://www.tsum.ru/product/he00860972-zhilet-iz-mekha-sobolya-sablefur-temno-korichnevyi/?sizeId=13724910'
+      },
+      20: {
+        name: 'Кашемировое пальто',
+        furType: ['соболь'],
+        additionalMaterial: 'Подкладка-кашемир',
+        price: '1 254 000 ₽',
+        category: 'Премиум',
+        images: [
+          {
+            src: 'https://st-cdn.tsum.com/sig/e45daae2df4186d57263b800717fd56b/width/763/i/10/03/68/1a/8329c640-8fa2-4557-bd8b-c004ea7e7983.jpg',
+            alt: 'Кашемировое пальто'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/cac937e3367c653156a772f4dda5e510/width/763/i/10/03/68/1a/118d8b1f-07ce-4d75-bf05-1d3881c096a9.jpg',
+            alt: 'Кашемировое пальто'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/ce3b4b472e44a8de1cdae3879f40fb82/width/763/i/10/03/68/1a/609ff5c4-b9db-4515-8965-df313ad559f7.jpg',
+            alt: 'Кашемировое пальто'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/491f92c4a9d0050ead17f7a98fa9508e/width/763/i/10/03/68/1a/6d97d978-43d1-431c-9da0-2ca54a9acb6f.jpg',
+            alt: 'Кашемировое пальто'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/1706b40a25783a3b8e84236cb894a766/width/763/i/10/03/68/1a/82e0a6cb-4a0b-4731-9361-3e756ccd9c49.jpg',
+            alt: 'Кашемировое пальто'
+          }
+        ],
+        description:
+          'Для изготовления кремового пальто выбрали мягкий, приятный на ощупь кашемир, созданный из почти невесомого пуха высокогорных коз. Благодаря суровым климатическим условиям, в которых обитают эти животные, такой материал приобретает способность поддерживать оптимальную терморегуляцию. Отделку выполнили из густого шелковистого меха благородного шоколадного оттенка. В комплекте — узкий пояс.',
+        details: {
+          material: 'Мех/соболь/: 100%',
+          lining: 'Подкладка-кашемир/: 100%',
+          origin: 'Россия',
+          sizes: '42-74',
+          colors: ['Кремовый'],
+          care: 'Профессиональная чистка'
+        },
+        features: [
+          '100% натуральный мех высочайшего качества',
+          'Ручная работа мастеров с многолетним опытом',
+          'Эксклюзивный дизайн',
+          'Индивидуальная подгонка по фигуре'
+        ],
+        purchaseLink:
+          'https://www.tsum.ru/product/he00860973-kashemirovoe-palto-sablefur-kremovyi/?sizeId=13660936'
+      },
+      21: {
+        name: 'Кашемировое пальто',
+        furType: ['кашемир'],
+        additionalMaterial: null,
+        price: '1 254 000 ₽',
+        category: 'Премиум',
+        images: [
+          {
+            src: 'https://st-cdn.tsum.com/sig/b9ffc7676904675719526ad10e8d5f9c/width/763/i/4c/94/9a/bb/a8bcfa29-bb51-4b5e-8cdf-572b464a7d14.jpg',
+            alt: 'Кашемировое пальто'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/506392c5482495a36b0ea1f196d0a359/width/763/i/4c/94/9a/bb/3d6b439c-854a-45f2-bd67-1ea47a86854e.jpg',
+            alt: 'Кашемировое пальто'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/9fb3763c0c863297321302d0873016a4/width/763/i/4c/94/9a/bb/318cfd62-5a34-45e6-a711-f29afcbf8398.jpg',
+            alt: 'Кашемировое пальто'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/e5ee5beabe7e219b63a33ee3e4609038/width/763/i/4c/94/9a/bb/681de8a2-6bf8-4110-812a-3b54de6222fa.jpg',
+            alt: 'Кашемировое пальто'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/6832a9cdf4f88fd8c81932812d563ad7/width/763/i/4c/94/9a/bb/258e45a2-1d85-49cd-bc76-ba9ce5031dbc.jpg',
+            alt: 'Кашемировое пальто'
+          }
+        ],
+        description:
+          'Коричневое пальто с двумя накладными карманами поможет выглядеть элегантно даже в ненастную погоду. Модель с цельнокроеными рукавами выполнили из почти невесомого, но при этом исключительно теплого кашемира. Для широкой опушки использовали безупречно выделанный мех соболя, выведенного в собственном зверохозяйстве. Линию талии подчеркивает узкий кожаный пояс, продетый в кулиску.',
+        details: {
+          material: 'Кашемир: 100%; Мех: 100%;',
+          lining: null,
+          origin: 'Россия',
+          sizes: '42-74',
+          colors: ['Коричневый'],
+          care: 'Профессиональная чистка'
+        },
+        features: [
+          '100% натуральный мех высочайшего качества',
+          'Ручная работа мастеров с многолетним опытом',
+          'Эксклюзивный дизайн',
+          'Индивидуальная подгонка по фигуре'
+        ],
+        purchaseLink:
+          'https://www.tsum.ru/product/he00860974-kashemirovoe-palto-sablefur-korichnevyi/?sizeId=13715435'
+      },
+      22: {
+        name: 'Кашемировое пальто',
+        furType: ['кашемир'],
+        additionalMaterial: 'Отделка-мех/соболь',
+        price: '1 254 000 ₽',
+        category: 'Премиум',
+        images: [
+          {
+            src: 'https://st-cdn.tsum.com/sig/c67a920553b89022933e3bf573f75cdd/width/763/i/75/97/93/9a/7597939a-f0af-3f39-8c17-f221ec0cebb8.jpg',
+            alt: 'Кашемировое пальто'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/99e23cc53e9597b3a56d79ee127cd77e/width/763/i/54/13/3e/c3/54133ec3-65b5-3ed7-b2e5-a61428e94759.jpg',
+            alt: 'Кашемировое пальто'
+          },
+
+          {
+            src: 'https://st-cdn.tsum.com/sig/1137b565ad445019020ae5699a1a2178/width/763/i/fb/83/9a/72/fb839a72-40b2-3c2d-b8b5-b87c2bf3f2aa.jpg',
+            alt: 'Кашемировое пальто'
+          },
+
+          {
+            src: 'https://st-cdn.tsum.com/sig/560961abec4d0cbd6dd6a0dc3d1aeee3/width/763/i/bc/02/4d/48/bc024d48-2bbf-3d34-b42f-9e7c3d18d5c3.jpg',
+            alt: 'Кашемировое пальто'
+          },
+
+          {
+            src: 'https://st-cdn.tsum.com/sig/5a0f52ce33bff5fab61e31be8b0c9d94/width/763/i/92/25/df/35/9225df35-4228-383a-b683-2c3ca8cfbf66.jpg',
+            alt: 'Кашемировое пальто'
+          }
+        ],
+        description:
+          'Бежевое пальто с клетчатой жаккардовой фактурой делает максимально комфортным мягкий нежный кашемир, который хорошо удерживает тепло. Отделку воротника, плавно переходящую в кант по краю полочек, выполнили из пушистого меха баргузинского соболя, тщательно подобранного по цвету и длине остевого волоса. Детали кропотливо собрали вручную, сформировав полосатый узор. Посадка на талии регулируется кожаным шнуром, продетым в кулиску.',
+        details: {
+          material: 'Кашемир: 100%',
+          lining: 'Отделка-мех/соболь/: 100%',
+          origin: 'Россия',
+          sizes: '42-74',
+          colors: ['Бежевый'],
+          care: 'Профессиональная чистка'
+        },
+        features: [
+          '100% натуральный мех высочайшего качества',
+          'Ручная работа мастеров с многолетним опытом',
+          'Эксклюзивный дизайн',
+          'Индивидуальная подгонка по фигуре'
+        ],
+        purchaseLink:
+          'https://www.tsum.ru/product/he00850720-kashemirovoe-palto-sablefur-bezhevyi/?sizeId=13527331'
+      },
+      23: {
+        name: 'Кашемировый кейп',
+        furType: ['кашемир'],
+        additionalMaterial: 'Отделка-мех/соболь',
+        price: '925 000 ₽',
+        category: 'Премиум',
+        images: [
+          {
+            src: 'https://st-cdn.tsum.com/sig/311f94d75f9c81f3da595d0c76ea6b0e/width/763/i/e7/93/a5/d6/e793a5d6-d405-379a-85f6-fdde490a6c40.jpg',
+            alt: 'Кашемировый кейп'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/6c137d306d0b2c6bb3e42c7786577e82/width/763/i/10/57/bf/a4/1057bfa4-4f6f-39f8-af77-26857da7862f.jpg',
+            alt: 'Кашемировый кейп'
+          },
+
+          {
+            src: 'https://st-cdn.tsum.com/sig/5f1b7c1f84615c512a29624353085162/width/763/i/06/65/25/d6/066525d6-4b47-33de-b8a5-a0d3b74bb351.jpg',
+            alt: 'Кашемировый кейп'
+          },
+
+          {
+            src: 'https://st-cdn.tsum.com/sig/63d8a42ef651c41c5bb7679cd6356951/width/763/i/39/09/a8/fc/3909a8fc-0b93-3439-8ec4-ba8fcec1a317.jpg',
+            alt: 'Кашемировый кейп'
+          },
+
+          {
+            src: 'https://st-cdn.tsum.com/sig/c43ba23f923dfddcd50ceebb482317eb/width/763/i/f0/63/4e/55/f0634e55-0991-3885-b894-0d2a9278f952.jpg',
+            alt: 'Кашемировый кейп'
+          }
+        ],
+        description:
+          'Терракотовый оттенок делает кейп акцентной деталью образа. За комфорт отвечает мягкий нежный кашемир, который почти ничего не весит и при этом поддерживает оптимальный микроклимат. Отделку отложного воротника, трансформирующегося в стойку, выполнили из шелковистого меха баргузинского соболя, искрящегося в лучах света. Длинный пояс-лента из тонкой кожи в тон поможет акцентировать талию.',
+        details: {
+          material: 'Кашемир: 100%',
+          lining: 'Отделка-мех/соболь/: 100%',
+          origin: 'Россия',
+          sizes: '42-74',
+          colors: ['Терракотовый'],
+          care: 'Профессиональная чистка'
+        },
+        features: [
+          '100% натуральный мех высочайшего качества',
+          'Ручная работа мастеров с многолетним опытом',
+          'Эксклюзивный дизайн',
+          'Индивидуальная подгонка по фигуре'
+        ],
+        purchaseLink:
+          'https://www.tsum.ru/product/he00850721-kashemirovyi-keip-sablefur-terrakotovyi/?sizeId=13527335'
+      },
+      24: {
+        name: 'Кашемировое пальто с отделкой из меха соболя',
+        furType: ['кашемир'],
+        additionalMaterial: 'Отделка-мех/соболь; Подкладка-шёлк',
+        price: '1 140 000 ₽',
+        category: 'Премиум',
+        images: [
+          {
+            src: 'https://st-cdn.tsum.com/sig/c6bc11391e70e74c43c60e512a520be6/width/763/i/f8/a4/de/73/f8a4de73-2db2-3540-8b0c-50a3e31dd441.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха соболя'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/9a48fb8ad3afe0e572d3feeabec1112c/width/763/i/fb/73/eb/c2/fb73ebc2-6718-3559-baa5-e81aa5a9aae6.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха соболя'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/3746d7905ea2bee3c2682dafb833d000/width/763/i/4c/09/43/9c/4c09439c-9c3b-320a-add3-e370bee80ebd.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха соболя'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/e65230681e2e7636aa9eea154fa452cc/width/763/i/19/19/df/96/1919df96-4352-3c43-ad43-baedb26023de.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха соболя'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/7ad2fa201b433cd37d7056a21af79181/width/763/i/4e/29/0d/d2/4e290dd2-bcee-3ed5-a8ed-c9719ccbfa9b.jpg',
+            alt: 'Кашемировое пальто с отделкой из меха соболя'
+          }
+        ],
+        description:
+          'Команда марки сделала длинное пальто максимально комфортным и при этом эффектным. Модель сшили из нежного плотного кашемира, хорошо удерживающего тепло, а для отделки использовали сияющий мех баргузинского соболя характерного шоколадного оттенка. Длинный шнур, продетый в пояс-кулиску, формирует приталенный силуэт. Его, как и узкий кант, подчеркивающий отвороты манжет, выполнили из тонкой кожи.',
+        details: {
+          material: 'Кашемир: 100%',
+          lining: 'Отделка-мех/соболь/: 100%; Подкладка-шелк: 100%;',
+          origin: 'Россия',
+          sizes: '42-74',
+          colors: ['Темно-синий'],
+          care: 'Профессиональная чистка'
+        },
+        features: [
+          '100% натуральный мех высочайшего качества',
+          'Ручная работа мастеров с многолетним опытом',
+          'Эксклюзивный дизайн',
+          'Индивидуальная подгонка по фигуре'
+        ],
+        purchaseLink:
+          'https://www.tsum.ru/product/he00798296-kashemirovoe-palto-s-otdelkoi-iz-mekha-sobolya-sablefur-temno-sinii-id13622869/?sizeId=13527330'
+      },
+      25: {
+        name: 'Кашемировый кейп',
+        furType: ['кашемир'],
+        additionalMaterial: 'Отделка-мех/соболь',
+        price: '925 000 ₽',
+        category: 'Премиум',
+        images: [
+          {
+            src: 'https://st-cdn.tsum.com/sig/fdf2213c2eeb363a17526003f158b37d/width/763/i/c6/f8/b7/07/c6f8b707-68c1-35f3-adf0-c33a755f38cb.jpg',
+            alt: 'Кашемировый кейп'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/ade0d9320c142cd708dee680677a22f1/width/763/i/08/c5/f1/56/08c5f156-85ed-3151-a53f-e3cbd96ace79.jpg',
+            alt: 'Кашемировый кейп'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/ec5da5b365a78c72ffde04bb89603f65/width/763/i/3e/c1/97/aa/3ec197aa-0f30-3f8d-b124-780267dcc6a8.jpg',
+            alt: 'Кашемировый кейп'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/7a540b409d676246e45d7e32793bbd49/width/763/i/d3/e4/a0/5b/d3e4a05b-501d-3898-807e-c8b5ae65c76d.jpg',
+            alt: 'Кашемировый кейп'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/caa2271322a74007e474b272630870ff/width/763/i/da/ef/07/f3/daef07f3-13e0-33b5-aced-2773cfaa6a6b.jpg',
+            alt: 'Кашемировый кейп'
+          }
+        ],
+        description:
+          'Коричневый кейп сшили из мягкого нежного кашемира. Модель из такого материала почти ничего не весит и при этом мягко окутывает теплом. Отделку воротника выполнили из шелковистого меха баргузинского соболя, искрящегося в лучах света. Изделие, застегивающееся потайными пуговицами, дополнили длинным поясом-лентой, формирующим приталенный силуэт.',
+        details: {
+          material: 'Кашемир: 100%',
+          lining: 'Отделка-мех/соболь/: 100%',
+          origin: 'Россия',
+          sizes: '42-74',
+          colors: ['Коричневый'],
+          care: 'Профессиональная чистка'
+        },
+        features: [
+          '100% натуральный мех высочайшего качества',
+          'Ручная работа мастеров с многолетним опытом',
+          'Эксклюзивный дизайн',
+          'Индивидуальная подгонка по фигуре'
+        ],
+        purchaseLink:
+          'https://www.tsum.ru/product/he00850722-kashemirovyi-keip-sablefur-korichnevyi/?sizeId=13527333'
+      },
+      26: {
+        name: 'Кашемировый кейп с воротником из меха рыси',
+        furType: ['кашемир'],
+        additionalMaterial: 'Отделка-мех/рысь',
+        price: '315 000 ₽',
+        category: 'Премиум',
+        images: [
+          {
+            src: 'https://st-cdn.tsum.com/sig/2db3f4fe3c6b1951ef02e34d3be4027a/width/763/i/41/42/f4/3d/4142f43d-a6e2-3337-9df3-53751513062b.jpg',
+            alt: 'Кашемировый кейп с воротником из меха рыси'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/e8c72b63229f8240ed3aae5233116ded/width/763/i/64/b2/93/d7/64b293d7-8693-31c1-b56d-f2e9639d3f07.jpg',
+            alt: 'Кашемировый кейп с воротником из меха рыси'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/55a5ded3aef79619685cd388fb097a5c/width/763/i/f0/dc/3a/1d/f0dc3a1d-4b07-30c1-a480-a40519e48c42.jpg',
+            alt: 'Кашемировый кейп с воротником из меха рыси'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/e8b1c53b8e1edb0b9dd7cecef86f2515/width/763/i/9a/35/ca/50/9a35ca50-1ed6-336e-81e4-8fa1c4ba2d4d.jpg',
+            alt: 'Кашемировый кейп с воротником из меха рыси'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/92e455a6418ae29f083c375d4432fa78/width/763/i/ac/b5/b7/eb/acb5b7eb-7689-3cfa-b80f-6e60fc60c188.jpg',
+            alt: 'Кашемировый кейп с воротником из меха рыси'
+          }
+        ],
+        description:
+          'Кейп деликатного кремового оттенка предлагает не выбирать между комфортом и элегантностью. Поставить знак равенства помогает съемный воротник из пушистого меха рыси с густым шелковистым подпушком. Для пошива модели с бахромой дизайнеры марки выбрали нежнейший кашемир, который не только мягче обычной шерсти, но и лучше согревает, оставаясь почти невесомым.',
+        details: {
+          material: 'Кашемир: 100%',
+          lining: 'Отделка-мех/рысь/: 100%',
+          origin: 'Россия',
+          sizes: '42-74',
+          colors: ['Кремовый'],
+          care: 'Профессиональная чистка'
+        },
+        features: [
+          '100% натуральный мех высочайшего качества',
+          'Ручная работа мастеров с многолетним опытом',
+          'Эксклюзивный дизайн',
+          'Индивидуальная подгонка по фигуре'
+        ],
+        purchaseLink:
+          'https://www.tsum.ru/product/he00816653-kashemirovyi-keip-s-vorotnikom-iz-mekha-rysi-sablefur-kremovyi/?sizeId=13164726'
+      },
+      27: {
+        name: 'Кашемировый кейп с воротником из меха рыси',
+        furType: ['кашемир'],
+        additionalMaterial: 'Отделка-мех/рысь',
+        price: '315 000 ₽',
+        category: 'Премиум',
+        images: [
+          {
+            src: 'https://st-cdn.tsum.com/sig/4f2aa106ad3ed37479b5cacf79a69dcb/width/763/i/80/97/97/cd/809797cd-2741-3ad2-97b2-f2b13569ec77.jpg',
+            alt: 'Кашемировый кейп с воротником из меха рыси'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/303c56f2fbb4efe30e2859851a7df784/width/763/i/66/c6/f5/52/66c6f552-0453-35a4-9179-887057cad399.jpg',
+            alt: 'Кашемировый кейп с воротником из меха рыси'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/f71b094b791ae0f163172245e8ab73a9/width/763/i/e4/03/b2/be/e403b2be-999d-3733-9674-9b530232f14b.jpg',
+            alt: 'Кашемировый кейп с воротником из меха рыси'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/848fec26d391a032e159efeb2fe6b57d/width/763/i/ec/70/c7/cc/ec70c7cc-c592-3b2e-adfd-e98731f7c092.jpg',
+            alt: 'Кашемировый кейп с воротником из меха рыси'
+          },
+          {
+            src: 'https://st-cdn.tsum.com/sig/284d38d4565ee50964e0adb37a702536/width/763/i/51/67/40/69/51674069-0360-3ca9-8750-aa7661eab765.jpg',
+            alt: 'Кашемировый кейп с воротником из меха рыси'
+          }
+        ],
+        description:
+          'Для пошива кейпа с большими накладными карманами и бахромой использовали исключительно мягкий и приятный на ощупь кашемир с муаровым мотивом. Отборные длинные волокна этого материала сформировали изолирующий слой, который хорошо сохраняет тепло, но не перегревает. Акцентной деталью модели цвета кофе с молоком сделали широкий съемный воротник из нежнейшего меха рыси с выразительным природным рисунком.',
+        details: {
+          material: 'Кашемир: 100%',
+          lining: 'Отделка-мех/рысь/: 100%',
+          origin: 'Россия',
+          sizes: '42-74',
+          colors: ['Коричневый'],
+          care: 'Профессиональная чистка'
+        },
+        features: [
+          '100% натуральный мех высочайшего качества',
+          'Ручная работа мастеров с многолетним опытом',
+          'Эксклюзивный дизайн',
+          'Индивидуальная подгонка по фигуре'
+        ],
+        purchaseLink:
+          'https://www.tsum.ru/product/he00816654-kashemirovyi-keip-s-vorotnikom-iz-mekha-rysi-sablefur-korichnevyi/?sizeId=13164729'
       }
     }
 
