@@ -1,0 +1,14 @@
+.git
+.next/cache
+node_modules
+
+.czrc
+.editorconfig
+.env.example
+.eslintignore
+.gitattributes
+.gitignore
+.prettierrc.js
+*.md
+eslint.config.js
+lefthook.yml
