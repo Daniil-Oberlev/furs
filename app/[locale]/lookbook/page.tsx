@@ -32,7 +32,7 @@ export default function LookbookPage() {
                 КОЛЛЕКЦИЯ ОСЕНЬ-ЗИМА 25/26
               </TypographyH2>
               <TypographyP className='text-white text-lg opacity-90'>
-                Эксклюзивные шубы из натурального меха
+                Эксклюзивные изделия из натурального меха
               </TypographyP>
             </div>
           </div>

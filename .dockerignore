@@ -10,5 +10,11 @@ node_modules
 .gitignore
 .prettierrc.js
 *.md
+
+Dockerfile
+.dockerignore
+justfile
+
 eslint.config.js
+tsconfig.tsbuildinfo
 lefthook.yml

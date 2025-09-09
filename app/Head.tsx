@@ -12,7 +12,7 @@ export const Head = () => {
             '@context': 'https://schema.org',
             '@type': 'ClothingStore',
             'name': COMPANY_NAME,
-            'description': 'Эксклюзивные шубы из натурального меха',
+            'description': 'Эксклюзивные изделия из натурального меха',
             'url': 'https://sablefur.ru',
             'telephone': COMPANY_PHONE,
             'email': 'info@sablefur.ru',
@@ -23,7 +23,7 @@ export const Head = () => {
               'addressCountry': 'RU'
             },
             'openingHours': 'Mo-Su 10:00-21:00',
-            'priceRange': '1140000-3600000 RUB',
+            'priceRange': '200000-3600000 RUB',
             'paymentAccepted': 'Cash, Credit Card',
             'currenciesAccepted': 'RUB'
           })

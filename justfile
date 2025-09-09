@@ -1,15 +1,20 @@
-image-name := "furs_next-image"
+image-name := "chouqe/furs_next-image"
 container-name := "furs_next"
-network-name := "furs-network"
-host_port := "3000"
-internal_port := "3000"
+host-port := "3000"
+internal-port := "3000"
 
 build:
-    docker build -t {{image-name}}:latest  .
+    docker build -t {{image-name}}:latest .
 
 run:
-    docker run -d --name {{container-name}} --network {{network-name}} -p {{host_port}}:{{internal_port}} {{image-name}}:latest
+    docker run -d \
+      --name {{container-name}} \
+      -p {{host-port}}:{{internal-port}} \
+      --env-file .env.local \
+      {{image-name}}:latest
 
-stop:
-    docker stop {{container-name}}
-    docker rm {{container-name}}
+push:
+    docker push {{image-name}}:latest
+
+deploy: build push
+    echo "✅ Образ собран и запушен в Docker Hub"

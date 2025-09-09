@@ -71,20 +71,13 @@ export const lookbookImages = [
   },
   {
     id: 11,
-    title: 'Современная классика',
-    image: '/lookbook/EA1275.jpg',
-    description: 'Классический силуэт с современными деталями',
-    size: 'large'
-  },
-  {
-    id: 12,
     title: 'Авангардный стиль',
     image: '/lookbook/EA0835.jpg',
     description: 'Модель с лазерными дырками - современное прочтение классики',
     size: 'medium'
   },
   {
-    id: 13,
+    id: 12,
     title: 'Королевская роскошь',
     image: '/lookbook/EA9980.jpg',
     description: 'Модель для истинных ценителей роскоши',

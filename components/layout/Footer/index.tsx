@@ -27,7 +27,7 @@ export const Footer = () => {
               {/* <a href='tel:${COMPANY_PHONE}'> */}
               {/* <p>{COMPANY_PHONE}</p> */}
               {/* </a> */}
-              <a href='mailto:${COMPANY_EMAIL}'>
+              <a href='mailto:info@sablefur.ru'>
                 <p>{COMPANY_EMAIL}</p>
               </a>
               {/* <p>{SHOP_ADDRESS}</p> */}
