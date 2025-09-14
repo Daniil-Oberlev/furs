@@ -122,65 +122,6 @@ export const getProductData = (): ProductData => {
           'https://www.tsum.ru/product/he00905743-shuba-iz-svakary-sablefur-svetlo-seryi/'
       },
       3: {
-        name: 'Шуба из меха норки',
-        furType: ['норка'],
-        additionalMaterial: 'Подкладка-шелк',
-        price: '1 640 000 ₽',
-        category: 'Премиум',
-        images: [
-          {
-            src: 'https://st-cdn.tsum.com/sig/1b61d32937a2c1d1ffd66b5f5e08109d/width/763/i/ba/f4/9a/ae/96c3b72f-d448-4798-9ff1-e339edd87002.jpg',
-            alt: 'Шуба из меха норки'
-          },
-          {
-            src: 'https://st-cdn.tsum.com/sig/a9d9d7206f585af850b5179a29dfa6f4/width/763/i/ba/f4/9a/ae/82d606ba-71b9-42bf-a90f-7746792d407d.jpg',
-            alt: 'Шуба из меха норки'
-          },
-          {
-            src: 'https://st-cdn.tsum.com/sig/84de3414d3fa1d7c8d0db4309524560f/width/763/i/ba/f4/9a/ae/c117161d-6ef4-4505-8643-73d03619690e.jpg',
-            alt: 'Шуба из меха норки'
-          },
-          {
-            src: 'https://st-cdn.tsum.com/sig/97711de90494b3571a5305489bfc6c53/width/763/i/ba/f4/9a/ae/1293ebec-40c6-4fd6-84c7-a4bba29073d2.jpg',
-            alt: 'Шуба из меха норки'
-          },
-          {
-            src: 'https://st-cdn.tsum.com/sig/546c5d710f9c1eb76c58657c86e958c2/width/763/i/ba/f4/9a/ae/e1e1a15d-e144-4501-808c-f6a3adae432a.jpg',
-            alt: 'Шуба из меха норки'
-          },
-          {
-            src: 'https://st-cdn.tsum.com/sig/9afb3e1e38b6e9c531d01b7f256b75ee/width/763/i/ba/f4/9a/ae/2be0578f-a205-40e8-9e56-04975209e25e.jpg',
-            alt: 'Шуба из меха норки'
-          },
-          {
-            src: 'https://st-cdn.tsum.com/sig/89e346a55c6bb75a2ab7b188ce234f36/width/763/i/ba/f4/9a/ae/7c4cec49-9b5d-45c8-8f39-e0abbaf17342.jpg',
-            alt: 'Шуба из меха норки'
-          },
-          {
-            src: 'https://st-cdn.tsum.com/sig/2b08d5ae90921fe4340aab8d147ef629/width/763/i/ba/f4/9a/ae/5bc11a87-47ae-4b26-88fa-4be194cd95c4.jpg',
-            alt: 'Шуба из меха норки'
-          }
-        ],
-        description:
-          'Клетчатую шубу со спущенной линией плеч и круглым вырезом сшили из меха норки, которому придали рифленую фактуру. Модель с потайной застежкой и боковыми карманами дополнили широким парным шарфом с длинной бахромой на концах.',
-        details: {
-          material: 'Мех/норка/: 100%',
-          lining: 'Подкладка-шелк: 100%',
-          origin: 'Россия',
-          sizes: '42-74',
-          colors: ['Разноцветный'],
-          care: 'Профессиональная чистка'
-        },
-        features: [
-          '100% натуральный мех высочайшего качества',
-          'Ручная работа мастеров с многолетним опытом',
-          'Эксклюзивный дизайн',
-          'Индивидуальная подгонка по фигуре'
-        ],
-        purchaseLink:
-          'https://www.tsum.ru/product/he00905745-shuba-iz-mekha-norki-sablefur-raznotcvetnyi/'
-      },
-      4: {
         name: 'Шуба из меха оцелота и соболя',
         furType: ['оцелот', 'соболь'],
         additionalMaterial: 'Подкладка-шелк',
@@ -231,7 +172,7 @@ export const getProductData = (): ProductData => {
         purchaseLink:
           'https://www.tsum.ru/product/he00798294-shuba-iz-mekha-otcelota-i-sobolya-sablefur-leopardovyi/'
       },
-      5: {
+      4: {
         name: 'Шуба из меха лисы',
         furType: ['лиса'],
         additionalMaterial: 'Подкладка-шелк',
@@ -282,7 +223,7 @@ export const getProductData = (): ProductData => {
         purchaseLink:
           'https://www.tsum.ru/product/he00897330-shuba-iz-mekha-lisy-sablefur-bezhevyi/'
       },
-      6: {
+      5: {
         name: 'Шуба из каракульчи',
         furType: ['каракуль'],
         additionalMaterial: 'Подкладка-шелк',
@@ -333,7 +274,7 @@ export const getProductData = (): ProductData => {
         purchaseLink:
           'https://www.tsum.ru/product/he00897329-shuba-iz-karakulchi-sablefur-bordovyi/'
       },
-      7: {
+      6: {
         name: 'Шуба из меха соболя',
         furType: ['соболь'],
         additionalMaterial: null,
@@ -380,7 +321,7 @@ export const getProductData = (): ProductData => {
         purchaseLink:
           'https://www.tsum.ru/product/he00804436-shuba-iz-mekha-sobolya-sablefur-korichnevyi/'
       },
-      8: {
+      7: {
         name: 'Шуба из меха оцелота',
         furType: ['оцелот'],
         additionalMaterial: null,
@@ -427,7 +368,7 @@ export const getProductData = (): ProductData => {
         purchaseLink:
           'https://www.tsum.ru/product/he00804437-shuba-iz-mekha-otcelota-sablefur-leopardovyi/'
       },
-      9: {
+      8: {
         name: 'Шуба из меха соболя',
         furType: ['соболь'],
         additionalMaterial: null,
@@ -474,7 +415,7 @@ export const getProductData = (): ProductData => {
         purchaseLink:
           'https://www.tsum.ru/product/he00804002-shuba-iz-mekha-sobolya-sablefur-korichnevyi/'
       },
-      10: {
+      9: {
         name: 'Шуба из меха оцелота и соболя',
         furType: ['оцелот', 'соболь'],
         additionalMaterial: 'Подкладка-шелк',
@@ -521,7 +462,7 @@ export const getProductData = (): ProductData => {
         purchaseLink:
           'https://www.tsum.ru/product/he00798294-shuba-iz-mekha-otcelota-i-sobolya-sablefur-korichnevyi/'
       },
-      11: {
+      10: {
         name: 'Шуба из меха соболя',
         furType: ['соболь', 'каракуль'],
         additionalMaterial: 'Подкладка-шелк',
@@ -568,7 +509,7 @@ export const getProductData = (): ProductData => {
         purchaseLink:
           'https://www.tsum.ru/product/he00798300-shuba-iz-mekha-sobolya-sablefur-temno-korichnevyi/'
       },
-      12: {
+      11: {
         name: 'Шуба из меха соболя',
         furType: ['соболь', 'каракуль'],
         additionalMaterial: 'Подкладка-шелк',
@@ -615,7 +556,7 @@ export const getProductData = (): ProductData => {
         purchaseLink:
           'https://www.tsum.ru/product/he00798299-shuba-iz-mekha-sobolya-sablefur-temno-korichnevyi/'
       },
-      13: {
+      12: {
         name: 'Шуба из меха соболя',
         furType: ['соболь'],
         additionalMaterial: 'Подкладка-шелк',
@@ -662,7 +603,7 @@ export const getProductData = (): ProductData => {
         purchaseLink:
           'https://www.tsum.ru/product/he00798295-shuba-iz-mekha-sobolya-sablefur-temno-korichnevyi/'
       },
-      14: {
+      13: {
         name: 'Кашемировое пальто с отделкой из меха соболя',
         furType: ['кашемир'],
         additionalMaterial: 'Отделка-мех/соболь',
@@ -709,7 +650,7 @@ export const getProductData = (): ProductData => {
         purchaseLink:
           'https://www.tsum.ru/product/he00897331-kashemirovoe-palto-s-otdelkoi-iz-mekha-sobolya-sablefur-fioletovyi/?sizeId=14231154'
       },
-      15: {
+      14: {
         name: 'Кашемировое пальто с отделкой из меха норки',
         furType: ['кашемир'],
         additionalMaterial: 'Отделка-мех/норка',
@@ -756,7 +697,7 @@ export const getProductData = (): ProductData => {
         purchaseLink:
           'https://www.tsum.ru/product/he00897333-kashemirovoe-palto-s-otdelkoi-iz-mekha-norki-sablefur-bezhevyi/?sizeId=14231167'
       },
-      16: {
+      15: {
         name: 'Кашемировое пальто с отделкой из меха соболя',
         furType: ['кашемир'],
         additionalMaterial: 'Отделка-мех/соболь',
@@ -803,7 +744,7 @@ export const getProductData = (): ProductData => {
         purchaseLink:
           'https://www.tsum.ru/product/he00900280-kashemirovoe-palto-s-otdelkoi-iz-mekha-sobolya-sablefur-kremovyi/?sizeId=14231166'
       },
-      17: {
+      16: {
         name: 'Кашемировое пальто с отделкой из меха соболя',
         furType: ['кашемир'],
         additionalMaterial: 'Отделка-мех/соболь',
@@ -850,7 +791,7 @@ export const getProductData = (): ProductData => {
         purchaseLink:
           'https://www.tsum.ru/product/he00900281-kashemirovoe-palto-s-otdelkoi-iz-mekha-sobolya-sablefur-temno-sinii/?sizeId=14231169'
       },
-      18: {
+      17: {
         name: 'Кашемировая парка с подкладкой из меха соболя и норки',
         furType: ['кашемир'],
         additionalMaterial: 'Отделка-мех/соболь; Подкладка-мех/норка',
@@ -897,7 +838,7 @@ export const getProductData = (): ProductData => {
         purchaseLink:
           'https://www.tsum.ru/product/he00900279-kashemirovaya-parka-s-podkladkoi-iz-mekha-sobolya-i-norki-sablefur-seryi/?sizeId=14229867'
       },
-      19: {
+      18: {
         name: 'Жилет из меха соболя',
         furType: ['соболь'],
         additionalMaterial: 'Подкладка-вискоза',
@@ -944,7 +885,7 @@ export const getProductData = (): ProductData => {
         purchaseLink:
           'https://www.tsum.ru/product/he00860972-zhilet-iz-mekha-sobolya-sablefur-temno-korichnevyi/?sizeId=13724910'
       },
-      20: {
+      19: {
         name: 'Кашемировое пальто',
         furType: ['соболь'],
         additionalMaterial: 'Подкладка-кашемир',
@@ -991,7 +932,7 @@ export const getProductData = (): ProductData => {
         purchaseLink:
           'https://www.tsum.ru/product/he00860973-kashemirovoe-palto-sablefur-kremovyi/?sizeId=13660936'
       },
-      21: {
+      20: {
         name: 'Кашемировое пальто',
         furType: ['кашемир'],
         additionalMaterial: null,
@@ -1038,7 +979,7 @@ export const getProductData = (): ProductData => {
         purchaseLink:
           'https://www.tsum.ru/product/he00860974-kashemirovoe-palto-sablefur-korichnevyi/?sizeId=13715435'
       },
-      22: {
+      21: {
         name: 'Кашемировое пальто',
         furType: ['кашемир'],
         additionalMaterial: 'Отделка-мех/соболь',
@@ -1088,7 +1029,7 @@ export const getProductData = (): ProductData => {
         purchaseLink:
           'https://www.tsum.ru/product/he00850720-kashemirovoe-palto-sablefur-bezhevyi/?sizeId=13527331'
       },
-      23: {
+      22: {
         name: 'Кашемировый кейп',
         furType: ['кашемир'],
         additionalMaterial: 'Отделка-мех/соболь',
@@ -1138,7 +1079,7 @@ export const getProductData = (): ProductData => {
         purchaseLink:
           'https://www.tsum.ru/product/he00850721-kashemirovyi-keip-sablefur-terrakotovyi/?sizeId=13527335'
       },
-      24: {
+      23: {
         name: 'Кашемировое пальто с отделкой из меха соболя',
         furType: ['кашемир'],
         additionalMaterial: 'Отделка-мех/соболь; Подкладка-шёлк',
@@ -1185,7 +1126,7 @@ export const getProductData = (): ProductData => {
         purchaseLink:
           'https://www.tsum.ru/product/he00798296-kashemirovoe-palto-s-otdelkoi-iz-mekha-sobolya-sablefur-temno-sinii-id13622869/?sizeId=13527330'
       },
-      25: {
+      24: {
         name: 'Кашемировый кейп',
         furType: ['кашемир'],
         additionalMaterial: 'Отделка-мех/соболь',
@@ -1232,7 +1173,7 @@ export const getProductData = (): ProductData => {
         purchaseLink:
           'https://www.tsum.ru/product/he00850722-kashemirovyi-keip-sablefur-korichnevyi/?sizeId=13527333'
       },
-      26: {
+      25: {
         name: 'Кашемировый кейп с воротником из меха рыси',
         furType: ['кашемир'],
         additionalMaterial: 'Отделка-мех/рысь',
@@ -1279,7 +1220,7 @@ export const getProductData = (): ProductData => {
         purchaseLink:
           'https://www.tsum.ru/product/he00816653-kashemirovyi-keip-s-vorotnikom-iz-mekha-rysi-sablefur-kremovyi/?sizeId=13164726'
       },
-      27: {
+      26: {
         name: 'Кашемировый кейп с воротником из меха рыси',
         furType: ['кашемир'],
         additionalMaterial: 'Отделка-мех/рысь',
