@@ -230,6 +230,7 @@ export const ConsultationFormContent = ({
           <PopoverContent
             className='w-[300px] p-0 z-[9999] pointer-events-auto'
             align='start'
+            inPortal={false}
           >
             <Calendar
               mode='single'

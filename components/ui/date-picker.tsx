@@ -48,6 +48,7 @@ export function DatePicker({
       <PopoverContent
         className='w-auto p-0'
         align='start'
+        inPortal={false}
       >
         <Calendar
           mode='single'
