@@ -30,7 +30,7 @@ export function DatePicker({
   toDate
 }: DatePickerProps) {
   return (
-    <Popover>
+    <Popover modal={false}>
       <PopoverTrigger asChild>
         <Button
           variant='outline'

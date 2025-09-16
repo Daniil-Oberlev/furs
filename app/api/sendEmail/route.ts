@@ -14,7 +14,7 @@ export async function POST(req: Request) {
       to: [config.to],
       subject: subject,
       text: text,
-      html: text.replace(/\n/g, '<br>') // Конвертируем переносы строк в HTML
+      html: text.replace(/\n/g, '<br>')
     })
 
     if (error) {

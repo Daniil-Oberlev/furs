@@ -215,6 +215,7 @@ export const ConsultationFormContent = ({
           onOpenChange={isOpen => {
             setOpen(isOpen)
           }}
+          modal={false}
         >
           <PopoverTrigger asChild>
             <Button
